@@ -1,0 +1,1183 @@
+/* ==========================================================================
+   HAVEN TEMPLATE SYSTEM — MULTI-DESIGN SUITE
+   Independent Design Systems for 6 Premium Industry Verticals:
+   1. NEXUS (Esports & Competitive Gaming)
+   2. VINTAGE (Editorial Hospitality & Fine Dining)
+   3. LUMI (Minimalist Creative Studio & Lifestyle)
+   4. ORBIT (Deep-Tech & Developer SaaS)
+   5. NOVA (Executive Corporate Advisory)
+   6. MONARCH (Elite Personal Brand & Thought Leader)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Orbitron:wght@500;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- SHARED DEMO TOOLBAR --- */
+.demo-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1.5rem;
+  background: rgba(8, 6, 15, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+}
+.demo-topbar a.demo-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.demo-topbar a.demo-back-btn:hover {
+  color: #ffffff;
+}
+.demo-title-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #cbd5e1;
+}
+.demo-status-chip {
+  padding: 0.15rem 0.5rem;
+  background: rgba(147, 51, 234, 0.2);
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  color: #d8b4fe;
+  font-size: 0.7rem;
+  border-radius: 4px;
+}
+.demo-disclaimer-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .demo-disclaimer-pill {
+    display: none;
+  }
+}
+.demo-topbar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: #9333ea;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.78rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.demo-topbar-cta:hover {
+  background: #a855f7;
+}
+
+/* ==========================================================================
+   1. NEXUS — ESPORTS & COMPETITIVE GAMING
+   ========================================================================== */
+.nexus-body {
+  background-color: #07060d;
+  color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+.nexus-body a { color: inherit; text-decoration: none; }
+
+/* Nexus Nav */
+.nexus-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background: rgba(10, 8, 18, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+}
+.nexus-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+.nexus-brand span { color: #06b6d4; text-shadow: 0 0 12px rgba(6, 182, 212, 0.7); }
+.nexus-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.nexus-links a {
+  color: #94a3b8;
+  transition: all 0.2s;
+  position: relative;
+  padding-bottom: 4px;
+}
+.nexus-links a:hover,
+.nexus-links a.active {
+  color: #22d3ee;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+}
+.nexus-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #06b6d4;
+  box-shadow: 0 0 8px #06b6d4;
+}
+.nexus-cta-btn {
+  font-family: 'Orbitron', sans-serif;
+  padding: 0.55rem 1.25rem;
+  background: linear-gradient(135deg, #06b6d4 0%, #7c3aed 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+  transition: all 0.2s;
+}
+.nexus-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.6);
+}
+
+/* Nexus Hero */
+.nexus-hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(7, 6, 13, 0.4) 0%, #07060d 100%),
+              url('../assets/nexus-arena.webp') center/cover no-repeat;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.25);
+}
+.nexus-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.nexus-kicker {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: #22d3ee;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  margin-bottom: 1.25rem;
+}
+.nexus-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+.nexus-title .highlight {
+  color: #22d3ee;
+  text-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
+}
+.nexus-desc {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+.nexus-stat-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  background: rgba(14, 11, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid #06b6d4;
+  padding: 1.25rem 1.75rem;
+  border-radius: 6px;
+  max-width: 780px;
+}
+.nexus-stat-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.nexus-stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Nexus Cards & Modules */
+.nexus-card {
+  background: #0f0c1c;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+.nexus-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+}
+.nexus-section {
+  padding: 5rem 2rem;
+  position: relative;
+}
+.nexus-section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+.nexus-section-sub {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+.nexus-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.nexus-roster-avatar {
+  width: 100%;
+  height: 240px;
+  background: #19142e;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.nexus-roster-avatar svg {
+  width: 90px;
+  height: 90px;
+  color: rgba(34, 211, 238, 0.3);
+}
+.nexus-footer {
+  background: #040307;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3rem 2rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   2. VINTAGE — EDITORIAL HOSPITALITY & FINE DINING
+   ========================================================================== */
+.vintage-body {
+  background-color: #171310;
+  color: #eae3d9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.7;
+}
+.vintage-body a { color: inherit; text-decoration: none; }
+
+/* Vintage Nav */
+.vintage-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: #171310;
+  border-bottom: 1px solid rgba(234, 227, 217, 0.12);
+}
+.vintage-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.85rem;
+  letter-spacing: 0.18em;
+  color: #fbf8f3;
+  text-transform: uppercase;
+}
+.vintage-brand small {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: #a89f91;
+  font-weight: 400;
+}
+.vintage-links {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+.vintage-links a {
+  color: #b5aba0;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+.vintage-links a:hover,
+.vintage-links a.active {
+  color: #fbf8f3;
+  border-bottom: 1px solid #c49a6c;
+}
+.vintage-cta-btn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.6rem;
+  background: transparent;
+  color: #fbf8f3;
+  border: 1px solid #c49a6c;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.vintage-cta-btn:hover {
+  background: #c49a6c;
+  color: #171310;
+}
+
+/* Vintage Hero */
+.vintage-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, rgba(23, 19, 16, 0.65) 0%, rgba(23, 19, 16, 0.95) 100%),
+              url('../assets/vintage-dining.webp') center/cover no-repeat;
+  padding: 5rem 2rem;
+  border-bottom: 1px solid rgba(234, 227, 217, 0.1);
+}
+.vintage-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+.vintage-kicker {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c49a6c;
+  margin-bottom: 1.5rem;
+}
+.vintage-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #fbf8f3;
+  margin-bottom: 1.75rem;
+  font-style: italic;
+}
+.vintage-title strong {
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+}
+.vintage-desc {
+  font-size: 1.1rem;
+  color: #d4c8b8;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+}
+.vintage-section {
+  padding: 6rem 2rem;
+}
+.vintage-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: #fbf8f3;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.vintage-section-sub {
+  text-align: center;
+  color: #a89f91;
+  font-size: 0.95rem;
+  max-width: 580px;
+  margin: 0 auto 3.5rem;
+}
+.vintage-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 2.5rem 3.5rem;
+}
+.vintage-menu-item {
+  border-bottom: 1px dashed rgba(234, 227, 217, 0.15);
+  padding-bottom: 1.25rem;
+}
+.vintage-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+.vintage-dish-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fbf8f3;
+}
+.vintage-dish-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: #c49a6c;
+}
+.vintage-dish-desc {
+  font-size: 0.88rem;
+  color: #a89f91;
+  font-style: italic;
+}
+.vintage-footer {
+  background: #110e0c;
+  border-top: 1px solid rgba(234, 227, 217, 0.08);
+  padding: 4rem 2rem;
+  color: #8c8275;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   3. LUMI — MINIMALIST CREATIVE STUDIO & LIFESTYLE
+   ========================================================================== */
+.lumi-body {
+  background-color: #f8f7f4;
+  color: #1a1a1a;
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5;
+}
+.lumi-body a { color: inherit; text-decoration: none; }
+
+.lumi-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 3rem;
+  background: #f8f7f4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.lumi-brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+.lumi-brand span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #c45d3e;
+  border-radius: 50%;
+  margin-left: 3px;
+}
+.lumi-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+.lumi-links a {
+  color: #666666;
+  transition: color 0.2s;
+}
+.lumi-links a:hover,
+.lumi-links a.active {
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.lumi-cta-btn {
+  padding: 0.65rem 1.4rem;
+  background: #000000;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+.lumi-cta-btn:hover {
+  background: #c45d3e;
+}
+
+.lumi-hero {
+  padding: 6rem 3rem 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.lumi-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.lumi-eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888888;
+  margin-bottom: 1.5rem;
+}
+.lumi-title {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: #111111;
+  margin-bottom: 2.5rem;
+  max-width: 1050px;
+}
+.lumi-lead-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: baseline;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.lumi-lead-text {
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: #333333;
+}
+.lumi-meta-list {
+  list-style: none;
+  font-size: 0.85rem;
+  color: #666666;
+  line-height: 1.8;
+}
+
+.lumi-section {
+  padding: 5rem 3rem;
+}
+.lumi-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2.5rem;
+}
+.lumi-work-card {
+  display: block;
+  group: pointer;
+}
+.lumi-work-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #e5e3dc;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.lumi-work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lumi-work-card:hover img {
+  transform: scale(1.04);
+}
+.lumi-work-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+.lumi-work-meta {
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+.lumi-footer {
+  background: #111111;
+  color: #f8f7f4;
+  padding: 5rem 3rem;
+}
+.lumi-footer a { color: #aaaaaa; }
+.lumi-footer a:hover { color: #ffffff; }
+
+/* ==========================================================================
+   4. ORBIT — DEEP-TECH & DEVELOPER SAAS
+   ========================================================================== */
+.orbit-body {
+  background-color: #0b0f19;
+  color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+.orbit-body a { color: inherit; text-decoration: none; }
+
+.orbit-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.orbit-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.orbit-brand-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.orbit-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+.orbit-links a:hover,
+.orbit-links a.active {
+  color: #ffffff;
+}
+.orbit-cta-btn {
+  padding: 0.55rem 1.2rem;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+.orbit-cta-btn:hover {
+  background: #2563eb;
+}
+
+.orbit-hero {
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 60%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.orbit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.orbit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.85rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+.orbit-title {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+.orbit-desc {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+.orbit-code-box {
+  background: #07090e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  color: #38bdf8;
+  text-align: left;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.orbit-dashboard-preview {
+  margin: 2rem auto 0;
+  max-width: 1040px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+.orbit-dashboard-preview img {
+  width: 100%;
+  display: block;
+}
+
+.orbit-section {
+  padding: 5rem 2rem;
+}
+.orbit-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+.orbit-card {
+  background: #0f1422;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: all 0.2s;
+}
+.orbit-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+.orbit-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.orbit-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.orbit-card-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+}
+
+.orbit-footer {
+  background: #07090e;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 4rem 2rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   5. NOVA — EXECUTIVE CORPORATE ADVISORY
+   ========================================================================== */
+.nova-body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+.nova-body a { color: inherit; text-decoration: none; }
+
+.nova-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nova-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.nova-brand span {
+  color: #38bdf8;
+}
+.nova-links {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  list-style: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+.nova-links a:hover,
+.nova-links a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 4px;
+}
+.nova-cta-btn {
+  padding: 0.6rem 1.4rem;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.nova-cta-btn:hover {
+  background: #38bdf8;
+  color: #ffffff;
+}
+
+.nova-hero {
+  padding: 6rem 3rem 5rem;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.nova-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nova-kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 1.25rem;
+}
+.nova-title {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  max-width: 880px;
+}
+.nova-desc {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+.nova-metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nova-metric-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.nova-metric-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.nova-section {
+  padding: 5rem 3rem;
+}
+.nova-section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+.nova-section-sub {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+.nova-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.nova-pillar-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 2.25rem;
+}
+.nova-pillar-num {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+.nova-pillar-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+.nova-pillar-desc {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+}
+
+.nova-footer {
+  background: #0a0f1d;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 4rem 3rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. MONARCH — PREMIUM PERSONAL BRAND & EXECUTIVE COUNSEL
+   ========================================================================== */
+.monarch-body {
+  background-color: #09090b;
+  color: #f4efe6;
+  font-family: 'Playfair Display', serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.7;
+}
+.monarch-body a { color: inherit; text-decoration: none; }
+.monarch-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.monarch-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 3.5rem;
+  background: #09090b;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+.monarch-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  color: #f4efe6;
+  text-transform: uppercase;
+}
+.monarch-brand span {
+  color: #c5a059;
+}
+.monarch-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.monarch-links a {
+  color: #a19d95;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+.monarch-links a:hover,
+.monarch-links a.active {
+  color: #c5a059;
+  border-bottom: 1px solid #c5a059;
+}
+.monarch-cta-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  background: #c5a059;
+  color: #09090b;
+  border: 1px solid #c5a059;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.monarch-cta-btn:hover {
+  background: #e2be78;
+}
+
+.monarch-hero {
+  padding: 6rem 3.5rem 5rem;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+}
+.monarch-container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.monarch-hero-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+.monarch-kicker {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c5a059;
+  margin-bottom: 1.5rem;
+}
+.monarch-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f4efe6;
+  margin-bottom: 1.75rem;
+}
+.monarch-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: #c5a059;
+}
+.monarch-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #b8b3a8;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+.monarch-portrait-frame {
+  position: relative;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 12px;
+  background: #111114;
+}
+.monarch-portrait-frame img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+
+.monarch-section {
+  padding: 6rem 3.5rem;
+}
+.monarch-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #f4efe6;
+  margin-bottom: 0.75rem;
+}
+.monarch-section-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #a19d95;
+  font-size: 0.95rem;
+  margin-bottom: 3.5rem;
+}
+.monarch-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+.monarch-card {
+  background: #111114;
+  border: 1px solid rgba(197, 160, 89, 0.18);
+  padding: 2.5rem;
+  transition: all 0.25s;
+}
+.monarch-card:hover {
+  border-color: #c5a059;
+  transform: translateY(-3px);
+}
+.monarch-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #f4efe6;
+  margin-bottom: 1rem;
+}
+.monarch-card-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  color: #a19d95;
+  line-height: 1.7;
+}
+
+.monarch-footer {
+  background: #050507;
+  border-top: 1px solid rgba(197, 160, 89, 0.15);
+  padding: 4rem 3.5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #716e68;
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .nexus-nav, .vintage-nav, .lumi-nav, .orbit-nav, .nova-nav, .monarch-nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .nexus-links, .vintage-links, .lumi-links, .orbit-links, .nova-links, .monarch-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .monarch-hero-layout, .lumi-lead-grid {
+    grid-template-columns: 1fr;
+  }
+  .vintage-menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

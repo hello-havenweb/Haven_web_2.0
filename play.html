@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAVEN PLAY — Games &amp; Digital Experiments</title>
+  <meta name="description" content="Play free browser games, challenge HAVEN Local AI, and explore interactive digital experiments.">
+  <meta property="og:title" content="HAVEN PLAY — Games &amp; Digital Experiments">
+  <meta property="og:description" content="Play free browser games, challenge HAVEN Local AI, and explore interactive digital experiments.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="play.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      <nav class="nav-wrap" aria-label="Main Navigation">
+        <!-- 1. LEFT BRAND ANCHOR -->
+        <div class="nav-brand-wrap">
+          <a href="index.html" class="nav-brand" aria-label="HAVEN — Home">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="brand-text">HAVEN</span>
+          </a>
+        </div>
+
+        <!-- 2. CENTER MAIN NAVIGATION -->
+        <div class="nav-menu-wrap">
+          <ul class="nav-menu" id="primary-nav-menu">
+            <li class="mobile-drawer-header" aria-hidden="true">
+              <div class="mobile-drawer-brand">
+                <span class="mobile-drawer-logo">HAVEN</span>
+                <span class="mobile-drawer-tagline">DIGITAL STUDIO</span>
+              </div>
+              <button class="mobile-drawer-close" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="templates.html" class="nav-link">Templates</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="ai.html" class="nav-link nav-link-feature nav-link-ai" title="HAVEN AI Consultation">
+                <span class="nav-feature-sparkle" aria-hidden="true">✦</span>
+                <span>HAVEN AI</span>
+              </a>
+            </li>
+            <li>
+              <a href="play.html" class="nav-link nav-link-feature nav-link-play active" title="HAVEN PLAY Digital Experiments">
+                <span class="nav-feature-dot" aria-hidden="true"></span>
+                <span>HAVEN PLAY</span>
+              </a>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-menu-cta-wrap">
+              <a href="contact.html" class="btn btn-primary btn-mobile-cta">
+                <span>Get Started</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <div class="mobile-drawer-footer">
+                <span>Direct Studio Commission &bull; hello.havenweb@gmail.com</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. RIGHT ACTION ANCHOR -->
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm btn-nav-cta">Get Started</a>
+          <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="primary-nav-menu" aria-expanded="false">
+            <span class="hamburger-box" aria-hidden="true">
+              <span class="hamburger-bar bar-1"></span>
+              <span class="hamburger-bar bar-2"></span>
+              <span class="hamburger-bar bar-3"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="section play-hero">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          HAVEN PLAY &bull; DIGITAL PLAYGROUND
+        </div>
+
+        <h1 class="hero-title" style="font-size: clamp(2.3rem, 5.5vw, 4rem); line-height: 1.15; margin-bottom: 1.25rem;">
+          PLAY. EXPLORE. <br>
+          <span class="gradient-text">CHALLENGE.</span>
+        </h1>
+
+        <p style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--accent-lavender); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.25rem;">
+          Games &bull; Local AI &bull; Digital Experiments
+        </p>
+
+        <p class="lead-text" style="max-width: 660px; margin: 0 auto 2.25rem; font-size: 1.1rem; line-height: 1.6;">
+          A small digital playground by HAVEN — play some games, challenge the machine, and explore interactive experiments.
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+          <a href="#games" class="btn btn-primary btn-lg">EXPLORE GAMES &rarr;</a>
+          <a href="#experiments" class="btn btn-secondary btn-lg">DIGITAL EXPERIMENTS &rarr;</a>
+        </div>
+
+        <!-- Freedom Strip -->
+        <div class="play-features-strip">
+          <div class="play-feature-item">
+            <span class="play-feature-dot"></span>
+            <span>100% Free</span>
+          </div>
+          <div class="play-feature-item">
+            <span class="play-feature-dot"></span>
+            <span>No Accounts Or Logins</span>
+          </div>
+          <div class="play-feature-item">
+            <span class="play-feature-dot"></span>
+            <span>Unlimited Rounds</span>
+          </div>
+          <div class="play-feature-item">
+            <span class="play-feature-dot"></span>
+            <span>HAVEN Local AI (No Cloud APIs)</span>
+          </div>
+          <div class="play-feature-item">
+            <span class="play-feature-dot"></span>
+            <span>Private Local Storage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GAMES CATALOG SECTION
+       ========================================================================= -->
+  <section id="games" class="section" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          ARCADE CATALOG
+        </div>
+        <h2 class="section-title">Challenge HAVEN Local AI</h2>
+        <p class="lead-text">
+          Zero subscriptions, zero energy meters, and zero paywalls. Browser-based game intelligence running 100% locally.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="play-filter-bar reveal">
+        <button class="play-tab-btn active" data-filter="all">All Games (5)</button>
+        <button class="play-tab-btn" data-filter="ai">HAVEN Local AI</button>
+        <button class="play-tab-btn" data-filter="reflex">Reflex &amp; Focus</button>
+        <button class="play-tab-btn" data-filter="mascot">Mascot Runner</button>
+      </div>
+
+      <!-- 5 Games Grid -->
+      <div class="play-games-grid">
+
+        <!-- GAME 01: TIC-TAC-TOE -->
+        <div class="game-card reveal" data-category="ai">
+          <div>
+            <div class="game-card-header">
+              <span class="game-num">GAME 01</span>
+              <span class="game-tag">Local AI &bull; Strategy</span>
+            </div>
+            <h3 class="game-title">TIC-TAC-TOE</h3>
+            <p class="game-desc">
+              Classic tactical grid duel against HAVEN Local AI. Choose X or O, switch between Easy, Medium, or Minimax Hard difficulty, and test your defensive strategy.
+            </p>
+          </div>
+          <div>
+            <div class="game-meta-row">
+              <span class="game-meta-item">AI: <strong>Minimax Engine</strong></span>
+              <span class="game-meta-item">Rounds: <strong>Unlimited</strong></span>
+            </div>
+            <button class="btn btn-primary game-card-btn" data-game="ttt">
+              <span>PLAY TIC-TAC-TOE</span> &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- GAME 02: ROCK PAPER SCISSORS -->
+        <div class="game-card reveal" data-category="ai">
+          <div>
+            <div class="game-card-header">
+              <span class="game-num">GAME 02</span>
+              <span class="game-tag">Local AI &bull; Mind Game</span>
+            </div>
+            <h3 class="game-title">ROCK PAPER SCISSORS</h3>
+            <p class="game-desc">
+              Challenge HAVEN Local AI in fast-paced showdowns. Features an adaptive pattern analyzer that learns your choice tendencies in real time without server tracking.
+            </p>
+          </div>
+          <div>
+            <div class="game-meta-row">
+              <span class="game-meta-item">Opponent: <strong>HAVEN AI</strong></span>
+              <span class="game-meta-item">Tracking: <strong>Session Score</strong></span>
+            </div>
+            <button class="btn btn-primary game-card-btn" data-game="rps">
+              <span>PLAY ROCK PAPER SCISSORS</span> &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- GAME 03: MEMORY MATCH -->
+        <div class="game-card reveal" data-category="reflex">
+          <div>
+            <div class="game-card-header">
+              <span class="game-num">GAME 03</span>
+              <span class="game-tag">Pattern &bull; Neural Focus</span>
+            </div>
+            <h3 class="game-title">MEMORY MATCH</h3>
+            <p class="game-desc">
+              Cybernetic card-matching puzzle with clean geometric tokens. Flip pairs, test working memory, track move counts, and establish your personal local best.
+            </p>
+          </div>
+          <div>
+            <div class="game-meta-row">
+              <span class="game-meta-item">Grids: <strong>12, 16 &amp; 20 Cards</strong></span>
+              <span class="game-meta-item">Records: <strong>Stored Locally</strong></span>
+            </div>
+            <button class="btn btn-primary game-card-btn" data-game="memory">
+              <span>PLAY MEMORY MATCH</span> &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- GAME 04: REACTION TEST -->
+        <div class="game-card reveal" data-category="reflex">
+          <div>
+            <div class="game-card-header">
+              <span class="game-num">GAME 04</span>
+              <span class="game-tag">Precision &bull; Reflex Speed</span>
+            </div>
+            <h3 class="game-title">REACTION TEST</h3>
+            <p class="game-desc">
+              High-precision millisecond reflex challenge. Wait for the randomized green signal, react instantly, avoid false starts, and see how your latency compares to cybernetic tiers.
+            </p>
+          </div>
+          <div>
+            <div class="game-meta-row">
+              <span class="game-meta-item">Precision: <strong>Milliseconds</strong></span>
+              <span class="game-meta-item">Score: <strong>Your Best MS</strong></span>
+            </div>
+            <button class="btn btn-primary game-card-btn" data-game="reaction">
+              <span>START REACTION TEST</span> &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- GAME 05: WOLF RUN -->
+        <div class="game-card reveal" data-category="mascot">
+          <div>
+            <div class="game-card-header">
+              <span class="game-num">GAME 05</span>
+              <span class="game-tag">Mascot &bull; 2D Arcade</span>
+            </div>
+            <h3 class="game-title">WOLF RUN</h3>
+            <p class="game-desc">
+              Original lightweight 2D mini-game starring the HAVEN nocturnal wolf mascot. Leap over obsidian spires, collect floating violet energy crystals, and survive increasing velocities.
+            </p>
+          </div>
+          <div>
+            <div class="game-meta-row">
+              <span class="game-meta-item">Controls: <strong>Jump &bull; Double-Jump</strong></span>
+              <span class="game-meta-item">Engine: <strong>HTML5 60FPS</strong></span>
+            </div>
+            <button class="btn btn-primary game-card-btn" data-game="wolfrun">
+              <span>PLAY WOLF RUN</span> &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE GAME ARENA MODAL
+       ========================================================================= -->
+  <div id="game-modal-overlay" class="game-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="game-modal-title">
+    <div class="game-modal-container">
+      <div class="game-modal-header">
+        <div class="game-modal-title-group">
+          <h3 id="game-modal-title" class="game-modal-title">GAME ARENA</h3>
+          <span class="game-modal-badge">HAVEN PLAY</span>
+        </div>
+        <button id="game-close-btn" class="game-close-btn" aria-label="Close Game Arena">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="game-modal-body" class="game-modal-body">
+        <!-- Injected dynamically by play.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       DIGITAL EXPERIMENTS SECTION
+       ========================================================================= -->
+  <section id="experiments" class="section" style="background: rgba(14, 10, 28, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          CREATIVE CODE LABS
+        </div>
+        <h2 class="section-title">Digital Experiments</h2>
+        <p class="lead-text">
+          Interactive aesthetic tools and visual experiments running directly in your browser.
+        </p>
+      </div>
+
+      <div class="experiments-grid">
+
+        <!-- EXP 01: GRADIENT LAB -->
+        <div class="experiment-card reveal">
+          <div class="exp-header">
+            <h4 class="exp-title">Gradient Lab</h4>
+            <span class="exp-num">LAB 01</span>
+          </div>
+          <p class="exp-desc">Adjust chromatic angles, randomize midnight palettes, and copy production CSS code directly to your clipboard.</p>
+          <div class="exp-viewport">
+            <div id="exp-grad-box" class="grad-preview-box"></div>
+          </div>
+          <div class="grad-controls">
+            <div class="grad-slider-row">
+              <span>Angle:</span>
+              <span id="exp-grad-angle-val">135°</span>
+            </div>
+            <input type="range" id="exp-grad-angle" min="0" max="360" value="135" class="game-select-input" style="width: 100%; padding: 0.2rem;" aria-label="Gradient Angle Slider">
+            <div class="grad-actions" style="margin-top: 0.5rem;">
+              <button id="exp-grad-rand" class="btn btn-secondary btn-sm" style="flex: 1;">Randomize</button>
+              <button id="exp-grad-copy" class="btn btn-primary btn-sm" style="flex: 1;">Copy CSS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXP 02: CURSOR LIGHT -->
+        <div class="experiment-card reveal">
+          <div class="exp-header">
+            <h4 class="exp-title">Cursor Light</h4>
+            <span class="exp-num">LAB 02</span>
+          </div>
+          <p class="exp-desc">An atmospheric pointer illumination experiment. Move your cursor inside the box to project ambient nocturnal lighting.</p>
+          <div class="exp-viewport">
+            <div id="exp-cursor-box" class="cursor-light-box">
+              <div id="exp-cursor-orb" class="cursor-glow-orb" style="opacity: 0;"></div>
+              <div style="position: absolute; bottom: 10px; right: 12px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">
+                Move pointer inside
+              </div>
+            </div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+            CSS Radial Beam &bull; Real-time vector tracking
+          </div>
+        </div>
+
+        <!-- EXP 03: PARTICLE PLAYGROUND -->
+        <div class="experiment-card reveal">
+          <div class="exp-header">
+            <h4 class="exp-title">Particle Playground</h4>
+            <span class="exp-num">LAB 03</span>
+          </div>
+          <p class="exp-desc">Ultra-lightweight connected particle physics simulation. Adjust node density while maintaining 60 FPS performance.</p>
+          <div class="exp-viewport">
+            <div class="particle-canvas-box">
+              <canvas id="particle-canvas" aria-label="Particle experiment canvas"></canvas>
+            </div>
+          </div>
+          <div class="grad-slider-row" style="margin-bottom: 0.4rem;">
+            <span>Particle Nodes:</span>
+            <span id="exp-particle-count">30</span>
+          </div>
+          <input type="range" id="exp-particle-slider" min="12" max="65" value="30" class="game-select-input" style="width: 100%; padding: 0.2rem;" aria-label="Particle density slider">
+        </div>
+
+        <!-- EXP 04: RANDOM COLOR LAB -->
+        <div class="experiment-card reveal">
+          <div class="exp-header">
+            <h4 class="exp-title">Random Color Lab</h4>
+            <span class="exp-num">LAB 04</span>
+          </div>
+          <p class="exp-desc">Generate harmonic deep nocturnal palettes. Click any swatch below to immediately copy its HEX code to your clipboard.</p>
+          <div id="exp-color-grid" class="color-swatches-grid"></div>
+          <button id="exp-color-gen" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Generate New Palette &rarr;
+          </button>
+        </div>
+
+        <!-- EXP 05: DIGITAL CLOCK -->
+        <div class="experiment-card reveal">
+          <div class="exp-header">
+            <h4 class="exp-title">Digital Clock</h4>
+            <span class="exp-num">LAB 05</span>
+          </div>
+          <p class="exp-desc">Minimalist high-frequency local digital clock displaying live time, millisecond telemetry, and local timezone offset.</p>
+          <div class="exp-viewport">
+            <div class="clock-viewport">
+              <div>
+                <span id="exp-clock-time" class="clock-digits">00:00:00</span>
+                <span id="exp-clock-ms" class="clock-ms">.00</span>
+              </div>
+              <div id="exp-clock-date" class="clock-sub">Loading local telemetry...</div>
+            </div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+            Synced to system clock &bull; Continuous micro-ticks
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PHILOSOPHY & FREE ACCESS
+       ========================================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal" style="text-align: center;">
+        <div class="eyebrow" style="margin-bottom: 0.75rem;">
+          <span class="eyebrow-dot"></span>
+          STUDIO ETHOS
+        </div>
+        <h2 class="cta-title">Built with Craft. Free Forever.</h2>
+        <p class="lead-text" style="max-width: 620px; margin: 0 auto 1.75rem;">
+          HAVEN is a web design studio, but we also believe in digital craft, playful experiments, and the creative spirit of the open web. No accounts, no paywalls, and no tracking.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="templates.html" class="btn btn-secondary btn-lg">Explore Studio Templates &rarr;</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">Commission a Website &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span>HAVEN</span>
+          </a>
+          <p class="footer-brand-desc">
+            Websites built for your vision. Dark cinematic aesthetics, uncompromising speed, and bespoke digital craftsmanship.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="templates.html">Templates</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="play.html">Play</a></li>
+            <li><a href="ai.html">HAVEN AI</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Templates</h4>
+          <ul class="footer-links">
+            <li><a href="templates/nexus.html">Nexus (Gaming)</a></li>
+            <li><a href="templates/vintage.html">Vintage (Restaurant)</a></li>
+            <li><a href="templates/lumi.html">Lumi (Creative)</a></li>
+            <li><a href="templates/orbit.html">Orbit (Technology)</a></li>
+            <li><a href="templates/nova.html">Nova (Business)</a></li>
+            <li><a href="templates/monarch.html">Monarch (Professional)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Project Enquiry</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HAVEN Digital Studio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING HAVEN AI BADGE (COMING SOON) -->
+  <a href="ai.html" class="floating-ai-btn" aria-label="HAVEN AI — In Development (Coming Soon)" title="HAVEN AI (Coming Soon)">
+    <span class="ai-sparkle">✦</span>
+    <span>HAVEN AI</span>
+    <span class="floating-ai-badge">Soon</span>
+  </a>
+
+  <script src="script.js" defer></script>
+  <script src="play.js" defer></script>
+</body>
+</html>

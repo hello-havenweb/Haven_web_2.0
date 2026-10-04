@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Reservations — ATELIER VINTAGE | HAVEN</title>
+  <meta name="description" content="Reserve your table at Atelier Vintage for our seasonal tasting menu, hearth counter, or private cellar salon.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="templates.css">
+</head>
+<body class="vintage-body">
+
+  <div class="demo-topbar">
+    <a href="../templates.html" class="demo-back-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to HAVEN Templates
+    </a>
+    <div class="demo-title-tag">
+      <span>TEMPLATE: VINTAGE (HOSPITALITY)</span>
+      <span class="demo-status-chip">PAGE 5 OF 6: RESERVATIONS</span>
+    </div>
+    <a href="../contact.html?template=VINTAGE" class="demo-topbar-cta">Get This Template</a>
+  </div>
+
+  <header class="vintage-nav">
+    <a href="vintage.html" class="vintage-brand">
+      ATELIER VINTAGE
+      <small>HEARTH DINING &bull; EST. 2018</small>
+    </a>
+    <nav>
+      <ul class="vintage-links">
+        <li><a href="vintage.html">Home</a></li>
+        <li><a href="vintage-menu.html">Menu</a></li>
+        <li><a href="vintage-about.html">About</a></li>
+        <li><a href="vintage-gallery.html">Atmosphere</a></li>
+        <li><a href="vintage-reservations.html" class="active">Reservations</a></li>
+        <li><a href="vintage-contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="vintage-reservations.html" class="vintage-cta-btn">Book Table</a>
+  </header>
+
+  <section class="vintage-section" style="padding-top: 4rem; padding-bottom: 2rem; text-align: center;">
+    <div class="vintage-container">
+      <div class="vintage-kicker">AN EVENING BY THE HEARTH</div>
+      <h1 class="vintage-title" style="font-size: 3.5rem; margin-bottom: 1rem;">
+        Table Reservations
+      </h1>
+      <p class="vintage-desc">
+        We look forward to welcoming you. Bookings are accepted up to 30 days in advance.
+      </p>
+    </div>
+  </section>
+
+  <section class="vintage-section" style="padding-top: 0;">
+    <div class="vintage-container" style="max-width: 780px;">
+      <div style="background: #110e0c; border: 1px solid rgba(234, 227, 217, 0.12); border-radius: 6px; padding: 3rem;">
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #fbf8f3; margin-bottom: 1.5rem; text-align: center;">
+          Select Your Dining Experience
+        </h2>
+
+        <form onsubmit="event.preventDefault(); alert('Demo Booking Confirmed! In production, this integrates with SevenRooms, Resy, or your reservation backend.');" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">DATE</label>
+              <input type="date" required style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;">
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">GUESTS</label>
+              <select style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;">
+                <option>2 Guests &bull; Dining Room</option>
+                <option>3 Guests &bull; Dining Room</option>
+                <option>4 Guests &bull; Dining Room</option>
+                <option>5-8 Guests &bull; Hearth Counter</option>
+                <option>9-18 Guests &bull; Private Salon Privé</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">SEATING SERVICE</label>
+              <select style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;">
+                <option>18:00 First Seating (Tasting Menu)</option>
+                <option>18:30 First Seating (Tasting Menu)</option>
+                <option>20:30 Second Seating (Tasting Menu)</option>
+                <option>21:00 Second Seating (Tasting Menu)</option>
+              </select>
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">WINE PAIRING</label>
+              <select style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;">
+                <option>Sommelier Reserve Natural Pairing (+&euro;75)</option>
+                <option>Cellar Prestige French Grand Cru (+&euro;125)</option>
+                <option>Non-Alcoholic Botanical Hearth Infusions (+&euro;45)</option>
+                <option>Select À La Carte Upon Arrival</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">FULL NAME</label>
+              <input type="text" placeholder="e.g. Claire Laurent" required style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;">
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">CONTACT EMAIL</label>
+              <input type="email" placeholder="claire@domain.fr" required style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;">
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; font-size: 0.8rem; letter-spacing: 0.1em; color: #c49a6c; margin-bottom: 0.4rem; text-transform: uppercase;">DIETARY RESTRICTIONS &amp; CELEBRATION NOTES</label>
+            <textarea rows="3" placeholder="Please let us know of any severe allergies or if you are celebrating a special occasion..." style="width: 100%; background: #171310; border: 1px solid rgba(234,227,217,0.2); border-radius: 4px; padding: 0.85rem; color: #eae3d9; font-family: 'Plus Jakarta Sans', sans-serif;"></textarea>
+          </div>
+
+          <button type="submit" class="vintage-cta-btn" style="background: #c49a6c; color: #171310; font-weight: 700; padding: 1rem; width: 100%; font-size: 1.1rem; margin-top: 1rem;">
+            Confirm Reservation Request &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="vintage-footer">
+    <div class="vintage-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: #fbf8f3; letter-spacing: 0.1em;">
+        ATELIER VINTAGE
+      </div>
+      <ul style="list-style: none; display: flex; gap: 2rem; font-size: 0.85rem;">
+        <li><a href="vintage.html">Home</a></li>
+        <li><a href="vintage-menu.html">Menu</a></li>
+        <li><a href="vintage-about.html">About</a></li>
+        <li><a href="vintage-gallery.html">Atmosphere</a></li>
+        <li><a href="vintage-reservations.html">Reservations</a></li>
+        <li><a href="vintage-contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div style="font-size: 0.8rem; color: #736a5e;">
+      &copy; 2026 ATELIER VINTAGE &bull; Demo Hospitality Template by HAVEN Digital Studio. All recipes and venues are fictional.
+    </div>
+  </footer>
+
+</body>
+</html>

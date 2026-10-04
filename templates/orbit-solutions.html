@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Solutions &amp; Use Cases — ORBIT | HAVEN</title>
+  <meta name="description" content="Discover how Orbit powers enterprise RAG pipelines, real-time cybersecurity telemetry, and autonomous multi-agent systems.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="templates.css">
+</head>
+<body class="orbit-body">
+
+  <div class="demo-topbar">
+    <a href="../templates.html" class="demo-back-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to HAVEN Templates
+    </a>
+    <div class="demo-title-tag">
+      <span>TEMPLATE: ORBIT (DEEP-TECH SAAS)</span>
+      <span class="demo-status-chip">PAGE 3 OF 6: SOLUTIONS</span>
+    </div>
+    <a href="../contact.html?template=ORBIT" class="demo-topbar-cta">Get This Template</a>
+  </div>
+
+  <header class="orbit-nav">
+    <a href="orbit.html" class="orbit-brand">
+      <div class="orbit-brand-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+      </div>
+      ORBIT<span style="font-weight: 400; color: #94a3b8; font-size: 0.85rem; margin-left: 2px;">CLOUD</span>
+    </a>
+    <nav>
+      <ul class="orbit-links">
+        <li><a href="orbit.html">Platform</a></li>
+        <li><a href="orbit-features.html">Features</a></li>
+        <li><a href="orbit-solutions.html" class="active">Solutions</a></li>
+        <li><a href="orbit-pricing.html">Pricing</a></li>
+        <li><a href="orbit-faq.html">FAQ</a></li>
+        <li><a href="orbit-contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="orbit-contact.html" class="orbit-cta-btn">Start Sandbox &rarr;</a>
+  </header>
+
+  <section class="orbit-hero" style="padding-bottom: 2rem;">
+    <div class="orbit-container">
+      <div class="orbit-badge">PRODUCTION WORKLOADS</div>
+      <h1 class="orbit-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">
+        Architected for Critical AI Workloads
+      </h1>
+      <p class="orbit-desc">
+        Explore reference patterns engineered for high-concurrency generative AI, multimodal search, and real-time fraud inference.
+      </p>
+    </div>
+  </section>
+
+  <section class="orbit-section" style="padding-top: 2rem;">
+    <div class="orbit-container">
+      <div style="display: flex; flex-direction: column; gap: 3rem;">
+
+        <!-- Solution 1 -->
+        <div class="orbit-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div>
+            <span style="color: #60a5fa; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">01 / GENERATIVE AI</span>
+            <h2 style="font-size: 1.8rem; color: #fff; margin: 0.5rem 0 1rem;">Enterprise RAG at Billion-Document Scale</h2>
+            <p style="color: #94a3b8; line-height: 1.7; margin-bottom: 1.5rem;">
+              Provide LLMs with instantaneous factual context. Orbit retrieves the top-100 most relevant semantic fragments across 500 million enterprise docs in under 6 milliseconds.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: #cbd5e1;">
+              <li>&check; Sub-millisecond metadata pre-filtering by user permissions</li>
+              <li>&check; Dynamic deduplication and contextual reranking</li>
+              <li>&check; Native integration with LangChain, LlamaIndex, and GenAI SDKs</li>
+            </ul>
+          </div>
+          <div style="background: #07090e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #38bdf8;">
+            // Benchmark: 50,000 Concurrent Retrieval Streams<br><br>
+            QPS: 54,200 req/sec<br>
+            P50 Latency: 2.1ms<br>
+            P99 Latency: 4.8ms<br>
+            Memory Footprint: 18.4 GB (PQ8 Enabled)<br>
+            Recall @ 10: 99.41%
+          </div>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="orbit-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div style="background: #07090e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #a78bfa;">
+            // Financial Telemetry Pattern<br><br>
+            Event Stream: Kafka &rarr; Orbit Ingest Worker<br>
+            Window: 5-minute rolling anomaly centroid<br>
+            Distance Metric: Cosine over 768 dims<br>
+            Outlier Flagging: &lt; 0.82 similarity threshold<br>
+            Action: Trigger automated AML review queue
+          </div>
+          <div>
+            <span style="color: #a78bfa; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">02 / FINTECH &amp; FRAUD</span>
+            <h2 style="font-size: 1.8rem; color: #fff; margin: 0.5rem 0 1rem;">Real-Time Financial Anomaly Clustering</h2>
+            <p style="color: #94a3b8; line-height: 1.7; margin-bottom: 1.5rem;">
+              Detect synthetic identity fraud and coordinated account takeovers as they happen. Orbit compares live transaction embeddings against known fraud vectors before authorization clears.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: #cbd5e1;">
+              <li>&check; Sub-10ms end-to-end authorization intercept</li>
+              <li>&check; Streaming vector insertion without query lock delays</li>
+              <li>&check; Bank-grade PCI-DSS and SOC2 Type II compliance</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="orbit-footer">
+    <div class="orbit-container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; margin-bottom: 3rem;">
+      <div>
+        <div class="orbit-brand" style="margin-bottom: 1rem;">
+          <div class="orbit-brand-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          ORBIT<span style="font-weight: 400; color: #94a3b8; font-size: 0.85rem; margin-left: 2px;">CLOUD</span>
+        </div>
+        <p style="max-width: 320px; font-size: 0.85rem; color: #64748b; line-height: 1.6;">
+          Distributed edge runtime and high-concurrency vector database engine. Built with HAVEN template craft.
+        </p>
+      </div>
+
+      <div>
+        <div style="font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 1rem; text-transform: uppercase;">PRODUCT</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem;">
+          <li><a href="orbit.html">Platform</a></li>
+          <li><a href="orbit-features.html">Engine Features</a></li>
+          <li><a href="orbit-solutions.html">Solutions Architecture</a></li>
+          <li><a href="orbit-pricing.html">Pricing Calculator</a></li>
+          <li><a href="orbit-faq.html">Technical FAQ</a></li>
+          <li><a href="orbit-contact.html">Sales &amp; Enterprise</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 1rem; text-transform: uppercase;">DEMO NOTICE</div>
+        <p style="max-width: 300px; font-size: 0.82rem; color: #475569; line-height: 1.6;">
+          This SaaS website is a fully functional design system demonstration. Product names, metrics, and cloud benchmarks are fictional illustrative examples.
+        </p>
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: #475569; flex-wrap: wrap; gap: 1rem;">
+      <div>&copy; 2026 ORBIT CLOUD TECHNOLOGIES &bull; HAVEN Templates.</div>
+      <div>Privacy Policy &bull; SLA Status: 99.999% Available</div>
+    </div>
+  </footer>
+
+</body>
+</html>

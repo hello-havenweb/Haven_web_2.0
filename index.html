@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAVEN — Websites Built for Your Vision</title>
+  <meta name="description" content="Premium website-building and digital experience studio. Explore bespoke templates, custom craft, and cinematic web design.">
+  <meta property="og:title" content="HAVEN — Websites Built for Your Vision">
+  <meta property="og:description" content="Premium website-building and digital experience studio. Explore bespoke templates, custom craft, and cinematic web design.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="play.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      <nav class="nav-wrap" aria-label="Main Navigation">
+        <!-- 1. LEFT BRAND ANCHOR -->
+        <div class="nav-brand-wrap">
+          <a href="index.html" class="nav-brand" aria-label="HAVEN — Home">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="brand-text">HAVEN</span>
+          </a>
+        </div>
+
+        <!-- 2. CENTER MAIN NAVIGATION -->
+        <div class="nav-menu-wrap">
+          <ul class="nav-menu" id="primary-nav-menu">
+            <li class="mobile-drawer-header" aria-hidden="true">
+              <div class="mobile-drawer-brand">
+                <span class="mobile-drawer-logo">HAVEN</span>
+                <span class="mobile-drawer-tagline">DIGITAL STUDIO</span>
+              </div>
+              <button class="mobile-drawer-close" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </li>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="templates.html" class="nav-link">Templates</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="ai.html" class="nav-link nav-link-feature nav-link-ai" title="HAVEN AI Consultation">
+                <span class="nav-feature-sparkle" aria-hidden="true">✦</span>
+                <span>HAVEN AI</span>
+              </a>
+            </li>
+            <li>
+              <a href="play.html" class="nav-link nav-link-feature nav-link-play" title="HAVEN PLAY Digital Experiments">
+                <span class="nav-feature-dot" aria-hidden="true"></span>
+                <span>HAVEN PLAY</span>
+              </a>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-menu-cta-wrap">
+              <a href="contact.html" class="btn btn-primary btn-mobile-cta">
+                <span>Get Started</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <div class="mobile-drawer-footer">
+                <span>Direct Studio Commission &bull; hello.havenweb@gmail.com</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. RIGHT ACTION ANCHOR -->
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm btn-nav-cta">Get Started</a>
+          <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="primary-nav-menu" aria-expanded="false">
+            <span class="hamburger-box" aria-hidden="true">
+              <span class="hamburger-bar bar-1"></span>
+              <span class="hamburger-bar bar-2"></span>
+              <span class="hamburger-bar bar-3"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section">
+    <!-- WOLF-INSPIRED ATMOSPHERIC HERO BACKGROUND LAYER -->
+    <div class="hero-wolf-atmosphere" aria-hidden="true">
+      <!-- Distant Veiled Purple Moonlight Glow -->
+      <div class="wolf-moonlight-glow"></div>
+      
+      <!-- Noble Atmospheric Wolf Silhouette & Soft Glowing Eyes -->
+      <div class="wolf-silhouette-wrap" id="wolf-parallax-target">
+        <svg class="wolf-silhouette-svg" viewBox="0 0 540 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="wolfAtmosphereGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.22" />
+              <stop offset="35%" stop-color="#9333ea" stop-opacity="0.14" />
+              <stop offset="70%" stop-color="#581c87" stop-opacity="0.08" />
+              <stop offset="100%" stop-color="#07050e" stop-opacity="0.0" />
+            </linearGradient>
+            <radialGradient id="wolfEyeGleam" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+              <stop offset="35%" stop-color="#f3e8ff" stop-opacity="0.85" />
+              <stop offset="65%" stop-color="#c084fc" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#9333ea" stop-opacity="0" />
+            </radialGradient>
+            <filter id="wolfMistBlur" x="-10%" y="-10%" width="120%" height="120%">
+              <feGaussianBlur stdDeviation="1.5" />
+            </filter>
+          </defs>
+
+          <!-- Architectural & Organic Silhouette of Wolf emerging from mist -->
+          <path class="wolf-silhouette-path" filter="url(#wolfMistBlur)" fill="url(#wolfAtmosphereGrad)" d="M148 42 C142 55, 134 85, 132 118 C116 132, 98 156, 86 182 C72 212, 64 246, 68 280 C72 312, 88 340, 114 364 C146 395, 192 422, 246 436 C302 444, 358 434, 404 406 C442 382, 468 344, 476 304 C484 262, 474 220, 452 184 C436 156, 416 132, 396 116 C394 84, 386 54, 380 42 C374 30, 364 34, 356 48 C342 72, 332 98, 324 122 C302 110, 276 104, 250 106 C224 104, 198 110, 176 122 C168 98, 158 72, 144 48 C136 34, 126 30, 148 42 Z" />
+          
+          <!-- Subtle sculptural geometric facets tracing wolf brows, cheekbones, and crest -->
+          <path stroke="rgba(192, 132, 252, 0.15)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M148 42 L185 125 L250 152 L315 125 L380 42 M185 125 L215 178 L250 196 L285 178 L315 125 M250 152 L250 196 M215 178 L232 235 L250 252 L268 235 L285 178 M250 252 L250 286 M185 125 L132 178 L142 245 L200 280 L232 235 M315 125 L368 178 L358 245 L300 280 L268 235 M200 280 L250 330 L300 280 M142 245 L114 315 L160 365 L215 350 L250 330 M358 245 L386 315 L340 365 L285 350 L250 330 M160 365 L246 415 L340 365" />
+          
+          <!-- Faint Purple Glowing Wolf Eyes (Subtle visual Easter egg) -->
+          <g class="wolf-eyes-group">
+            <!-- Left Eye -->
+            <ellipse class="wolf-eye-glow" cx="218" cy="178" rx="6.5" ry="3.2" transform="rotate(-8 218 178)" fill="url(#wolfEyeGleam)" />
+            <circle class="wolf-pupil-spark" cx="218" cy="177.5" r="1.1" fill="#ffffff" />
+            
+            <!-- Right Eye -->
+            <ellipse class="wolf-eye-glow" cx="282" cy="178" rx="6.5" ry="3.2" transform="rotate(8 282 178)" fill="url(#wolfEyeGleam)" />
+            <circle class="wolf-pupil-spark" cx="282" cy="177.5" r="1.1" fill="#ffffff" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-grid">
+        
+        <div class="hero-content reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            BOUTIQUE DIGITAL STUDIO • WEB ARCHITECTURE • BRANDING
+          </div>
+          
+          <h1 class="hero-title">
+            WEBSITES BUILT<br>
+            FOR<br>
+            <span class="gradient-text">YOUR VISION.</span>
+          </h1>
+
+          <p class="lead-text">
+            HAVEN crafts high-performance, cinematic websites for ambitious businesses and visionary founders. We combine studio-grade aesthetics with performance-focused architecture and 100% code ownership—delivering bespoke digital architecture that converts.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="templates.html" class="btn btn-primary btn-lg">Explore Templates <span class="arrow">&rarr;</span></a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Build With HAVEN</a>
+          </div>
+
+          <div class="hero-micro-trust">
+            <span class="micro-check">✓</span> Turnkey launch in 3–5 days <span class="micro-sep">·</span> 100% sovereign code <span class="micro-sep">·</span> Zero monthly builder lock-in
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <span class="trust-number">100%</span>
+              <span class="trust-label">Code Ownership</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-number">Edge</span>
+              <span class="trust-label">Optimized Delivery</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-number">6-Page</span>
+              <span class="trust-label">Complete Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CINEMATIC INTERACTIVE NIGHT / DAY SPLIT VIEWER WITH WOLF -->
+        <div class="hero-visual reveal">
+          <div class="split-viewer-card" aria-label="Interactive Night and Day Wolf Sanctuary Showcase">
+            <!-- Floating instructions badge -->
+            <div class="split-instructions">
+              <span class="pulse-indicator"></span>
+              <span>Drag or hover to reveal Night & Day</span>
+            </div>
+
+            <!-- Layer 1: Night Wolf (Base Layer) -->
+            <div class="split-layer split-layer-night">
+              <div class="stars-overlay"></div>
+              <div class="mist-overlay"></div>
+              <img class="hero-wolf-img" src="assets/hero.webp" alt="Cinematic HAVEN Charcoal Wolf on alpine ridge under deep purple starry night" loading="eager" referrerpolicy="no-referrer">
+              <div class="wolf-atmosphere-glow"></div>
+              <span class="split-badge split-badge-night">
+                <span class="badge-icon">☾</span> Night Vision
+              </span>
+            </div>
+
+            <!-- Layer 2: Day Environment (Clipped Overlay) -->
+            <div class="split-layer split-layer-day">
+              <div class="sun-glare-overlay"></div>
+              <img class="hero-day-img" src="assets/hero-day.webp" alt="HAVEN Sunlit Mountain Valley and Architectural City" loading="eager" referrerpolicy="no-referrer">
+              <span class="split-badge split-badge-day">
+                <span class="badge-icon">☼</span> Daylight
+              </span>
+            </div>
+
+            <!-- Visible thin purple transition line & draggable handle -->
+            <div class="split-divider-line" aria-hidden="true"></div>
+            <div class="split-handle" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="5" aria-valuemax="95" aria-label="Night and Day transition slider" title="Drag to compare Day & Night views">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+                <polyline points="9 18 3 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TRUST & SOCIAL PROOF / ARCHITECTURE CREDIBILITY
+       ========================================================================= -->
+  <section class="trust-credibility-section">
+    <div class="container">
+      <div class="trust-marquee-wrap reveal">
+        <div class="trust-marquee-label">INDUSTRIES WE DESIGN FOR &bull; SELECTED SPECIALIZATIONS &amp; DOMAIN CONCEPTS</div>
+        <div class="trust-logos-row">
+          <div class="trust-brand-mark">
+            <span class="mark-symbol">▲</span>
+            <div class="mark-text">
+              <span class="mark-name">APEX ESPORTS</span>
+              <span class="mark-domain">Gaming Circuits</span>
+            </div>
+          </div>
+          <div class="trust-brand-mark">
+            <span class="mark-symbol">❖</span>
+            <div class="mark-text">
+              <span class="mark-name">VELOUR HEARTH</span>
+              <span class="mark-domain">Fine Dining</span>
+            </div>
+          </div>
+          <div class="trust-brand-mark">
+            <span class="mark-symbol">◆</span>
+            <div class="mark-text">
+              <span class="mark-name">KINETIC SPATIAL</span>
+              <span class="mark-domain">Architecture</span>
+            </div>
+          </div>
+          <div class="trust-brand-mark">
+            <span class="mark-symbol">◉</span>
+            <div class="mark-text">
+              <span class="mark-name">VORTEX INFRA</span>
+              <span class="mark-domain">Deep-Tech Cloud</span>
+            </div>
+          </div>
+          <div class="trust-brand-mark">
+            <span class="mark-symbol">◈</span>
+            <div class="mark-text">
+              <span class="mark-name">STRATA ADVISORY</span>
+              <span class="mark-domain">Corporate M&amp;A</span>
+            </div>
+          </div>
+          <div class="trust-brand-mark">
+            <span class="mark-symbol">✦</span>
+            <div class="mark-text">
+              <span class="mark-name">MONARCH OFFICE</span>
+              <span class="mark-domain">Executive Brand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUTHENTIC CREDIBILITY BENCHMARKS & TESTIMONIAL / CASE SPOTLIGHT -->
+      <div class="trust-spotlight-grid reveal">
+        <div class="trust-benchmarks-card">
+          <div class="eyebrow" style="margin-bottom: 0.75rem;">
+            <span class="eyebrow-dot"></span>
+            VERIFIED STANDARDS
+          </div>
+          <h3 class="trust-card-title">Engineering Standards You Can Verify</h3>
+          <p class="trust-card-desc">
+            We reject bloated CMS platforms, monthly site-builder traps, and fragile plugins. Every HAVEN deployment is anchored in four verifiable architectural commitments:
+          </p>
+          <div class="trust-stats-list">
+            <div class="stat-row">
+              <div class="stat-number tabular-nums">100%</div>
+              <div class="stat-info">
+                <strong>100% Code Ownership</strong>
+                <span>You own every line of HTML, CSS, and JS outright. Zero recurring platform subscription fees.</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-number tabular-nums">Edge</div>
+              <div class="stat-info">
+                <strong>Optimized for Fast Loading</strong>
+                <span>Clean static assets delivered via modern global CDN edges without bloated CMS plugins.</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-number tabular-nums">6</div>
+              <div class="stat-info">
+                <strong>Turnkey Multi-Page Systems</strong>
+                <span>Production design systems built with domain-native visual hierarchy and responsive fidelity.</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-number tabular-nums">24h</div>
+              <div class="stat-info">
+                <strong>Human Brief Evaluation</strong>
+                <span>Every project submission is evaluated directly by our lead engineer within 24 hours.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-testimonial-card">
+          <div class="eyebrow" style="margin-bottom: 0.75rem;">
+            <span class="eyebrow-dot"></span>
+            CLIENT CONFIDENTIALITY &amp; CASES
+          </div>
+          <h3 class="trust-card-title">Client Case Studies &amp; NDA Commissions</h3>
+          <div class="testimonial-quote-box">
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-body">
+              HAVEN builds private flagship commissions under strict mutual NDA. Client identities, metrics, and proprietary repositories remain protected. Full authenticated case studies and verified client reviews are published upon formal public release authorization.
+            </p>
+            <div class="quote-footer">
+              <div class="quote-author-icon">HVN</div>
+              <div>
+                <div class="quote-author-name">Studio Governance &amp; NDA Policy</div>
+                <div class="quote-author-role">Boutique Commissions · Global Enterprise &amp; Founders</div>
+              </div>
+            </div>
+          </div>
+          <div class="trust-card-action">
+            <a href="contact.html" class="btn btn-secondary btn-sm" style="width: 100%;">
+              Inquire About Private Case Studies &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       1. WHAT HAVEN DOES
+       ========================================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          STUDIO CAPABILITIES
+        </div>
+        <h2 class="section-title">What HAVEN Does</h2>
+        <p class="lead-text">
+          We combine sculptural aesthetics, relentless performance engineering, and conversion strategy to build websites that elevate your business.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <div class="pillar-card reveal">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Web Architecture</h3>
+          <p class="pillar-desc">
+            High-performance static and custom websites built with clean semantic code, optimized loading speeds, and responsive fidelity across all devices.
+          </p>
+          <div class="pillar-benefit">
+            <span class="benefit-tag">Key Benefit:</span> Fast page loads, resilient static architecture, and zero monthly builder subscription fees.
+          </div>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Cinematic Art Direction</h3>
+          <p class="pillar-desc">
+            Sculptural aesthetics, dark-mode mastery, tailored typography, and atmospheric lighting designed to leave an unforgettable impression on your visitors and clients.
+          </p>
+          <div class="pillar-benefit">
+            <span class="benefit-tag">Key Benefit:</span> Instantly command premium authority and brand trust that justifies higher pricing and attracts discerning clientele.
+          </div>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Conversion &amp; Turnkey Systems</h3>
+          <p class="pillar-desc">
+            Complete 6-page design systems and bespoke builds engineered with clear editorial hierarchy, frictionless enquiry funnels, and high conversion rates.
+          </p>
+          <div class="pillar-benefit">
+            <span class="benefit-tag">Key Benefit:</span> Launch a world-class production website in days instead of months, with every page structured to turn traffic into clients.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. SELECTED TEMPLATES
+       ========================================================================= -->
+  <section class="section" style="background: rgba(14, 10, 28, 0.35);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          CURATED COLLECTION
+        </div>
+        <h2 class="section-title">Selected Templates</h2>
+        <p class="lead-text">
+          Precision-crafted design systems ready for immediate deployment or custom tailored by the HAVEN team.
+        </p>
+      </div>
+
+      <div class="templates-grid">
+
+        <!-- NEXUS -->
+        <div class="template-card reveal">
+          <div class="template-media">
+            <img src="assets/nexus.webp" alt="NEXUS Esports &amp; Gaming System" loading="lazy">
+            <span class="template-badge">6-Page System</span>
+          </div>
+          <div class="template-body">
+            <div class="template-meta">
+              <h3 class="template-name">NEXUS</h3>
+              <span class="template-category">Esports &bull; Gaming</span>
+            </div>
+            <p class="template-desc">
+              High-octane esports organization and tournament platform featuring live bracket trackers, verified player rosters, and game division directories.
+            </p>
+            <div class="template-included-pages">
+              <span class="included-label">What's Included (6-Page System):</span>
+              <span class="included-list">Home &bull; Team &bull; Games &bull; Tournaments &bull; News &bull; Contact</span>
+            </div>
+            <div class="template-pricing-row">
+              <span class="pricing-label">Starting Price</span>
+              <span class="pricing-val tabular-nums">PKR 29,000 <span class="pricing-sub">(or ~$105 USD)</span></span>
+            </div>
+            <div class="template-actions">
+              <a href="templates/nexus.html" class="btn btn-secondary btn-sm">View Demo</a>
+              <a href="contact.html?template=NEXUS" class="btn btn-primary btn-sm">Get This Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- VINTAGE -->
+        <div class="template-card reveal">
+          <div class="template-media">
+            <img src="assets/vintage.webp" alt="VINTAGE Fine Dining Template" loading="lazy">
+            <span class="template-badge">6-Page System</span>
+          </div>
+          <div class="template-body">
+            <div class="template-meta">
+              <h3 class="template-name">VINTAGE</h3>
+              <span class="template-category">Fine Dining &bull; Hearth</span>
+            </div>
+            <p class="template-desc">
+              Warm artisanal hospitality website featuring wood-fired seasonal tasting menus, natural wine cellar reserves, atmosphere gallery, and table bookings.
+            </p>
+            <div class="template-included-pages">
+              <span class="included-label">What's Included (6-Page System):</span>
+              <span class="included-list">Home &bull; Menu &bull; About &bull; Atmosphere &bull; Reservations &bull; Contact</span>
+            </div>
+            <div class="template-pricing-row">
+              <span class="pricing-label">Starting Price</span>
+              <span class="pricing-val tabular-nums">PKR 29,000 <span class="pricing-sub">(or ~$105 USD)</span></span>
+            </div>
+            <div class="template-actions">
+              <a href="templates/vintage.html" class="btn btn-secondary btn-sm">View Demo</a>
+              <a href="contact.html?template=VINTAGE" class="btn btn-primary btn-sm">Get This Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LUMI -->
+        <div class="template-card reveal">
+          <div class="template-media">
+            <img src="assets/lumi.webp" alt="LUMI Creative Studio Template" loading="lazy">
+            <span class="template-badge">6-Page System</span>
+          </div>
+          <div class="template-body">
+            <div class="template-meta">
+              <h3 class="template-name">LUMI</h3>
+              <span class="template-category">Spatial &bull; Identity</span>
+            </div>
+            <p class="template-desc">
+              Avant-garde creative direction and spatial studio layout with generous whitespace, minimalist framing, expansive case studies, and critical essays.
+            </p>
+            <div class="template-included-pages">
+              <span class="included-label">What's Included (6-Page System):</span>
+              <span class="included-list">Home &bull; About &bull; Work &bull; Services &bull; Journal &bull; Contact</span>
+            </div>
+            <div class="template-pricing-row">
+              <span class="pricing-label">Starting Price</span>
+              <span class="pricing-val tabular-nums">PKR 29,000 <span class="pricing-sub">(or ~$105 USD)</span></span>
+            </div>
+            <div class="template-actions">
+              <a href="templates/lumi.html" class="btn btn-secondary btn-sm">View Demo</a>
+              <a href="contact.html?template=LUMI" class="btn btn-primary btn-sm">Get This Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ORBIT -->
+        <div class="template-card reveal">
+          <div class="template-media">
+            <img src="assets/orbit.webp" alt="ORBIT Deep Tech &amp; SaaS Template" loading="lazy">
+            <span class="template-badge">6-Page System</span>
+          </div>
+          <div class="template-body">
+            <div class="template-meta">
+              <h3 class="template-name">ORBIT</h3>
+              <span class="template-category">Deep Tech &bull; SaaS</span>
+            </div>
+            <p class="template-desc">
+              Developer-first vector database and edge inference platform with terminal quickstarts, performance benchmarks, and transparent tier pricing.
+            </p>
+            <div class="template-included-pages">
+              <span class="included-label">What's Included (6-Page System):</span>
+              <span class="included-list">Home &bull; Features &bull; Solutions &bull; Pricing &bull; FAQ &bull; Contact</span>
+            </div>
+            <div class="template-pricing-row">
+              <span class="pricing-label">Starting Price</span>
+              <span class="pricing-val tabular-nums">PKR 29,000 <span class="pricing-sub">(or ~$105 USD)</span></span>
+            </div>
+            <div class="template-actions">
+              <a href="templates/orbit.html" class="btn btn-secondary btn-sm">View Demo</a>
+              <a href="contact.html?template=ORBIT" class="btn btn-primary btn-sm">Get This Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOVA -->
+        <div class="template-card reveal">
+          <div class="template-media">
+            <img src="assets/nova.webp" alt="NOVA Corporate Advisory Template" loading="lazy">
+            <span class="template-badge">6-Page System</span>
+          </div>
+          <div class="template-body">
+            <div class="template-meta">
+              <h3 class="template-name">NOVA</h3>
+              <span class="template-category">Corporate &bull; M&amp;A</span>
+            </div>
+            <p class="template-desc">
+              Data-backed corporate presentation and strategic advisory platform emphasizing cross-border M&amp;A, leadership counsel, and executive credibility.
+            </p>
+            <div class="template-included-pages">
+              <span class="included-label">What's Included (6-Page System):</span>
+              <span class="included-list">Home &bull; About &bull; Services &bull; Industries &bull; Team &bull; Contact</span>
+            </div>
+            <div class="template-pricing-row">
+              <span class="pricing-label">Starting Price</span>
+              <span class="pricing-val tabular-nums">PKR 29,000 <span class="pricing-sub">(or ~$105 USD)</span></span>
+            </div>
+            <div class="template-actions">
+              <a href="templates/nova.html" class="btn btn-secondary btn-sm">View Demo</a>
+              <a href="contact.html?template=NOVA" class="btn btn-primary btn-sm">Get This Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MONARCH -->
+        <div class="template-card reveal">
+          <div class="template-media">
+            <img src="assets/monarch.webp" alt="MONARCH Executive Personal Brand Template" loading="lazy">
+            <span class="template-badge">6-Page System</span>
+          </div>
+          <div class="template-body">
+            <div class="template-meta">
+              <h3 class="template-name">MONARCH</h3>
+              <span class="template-category">Executive &bull; Brand</span>
+            </div>
+            <p class="template-desc">
+              Commanding personal brand and board advisory showcase built for executive chairs, authors, and keynote speakers with private office inquiries.
+            </p>
+            <div class="template-included-pages">
+              <span class="included-label">What's Included (6-Page System):</span>
+              <span class="included-list">Home &bull; About &bull; Services &bull; Speaking &bull; Insights &bull; Contact</span>
+            </div>
+            <div class="template-pricing-row">
+              <span class="pricing-label">Starting Price</span>
+              <span class="pricing-val tabular-nums">PKR 29,000 <span class="pricing-sub">(or ~$105 USD)</span></span>
+            </div>
+            <div class="template-actions">
+              <a href="templates/monarch.html" class="btn btn-secondary btn-sm">View Demo</a>
+              <a href="contact.html?template=MONARCH" class="btn btn-primary btn-sm">Get This Template</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 3.5rem;">
+        <a href="templates.html" class="btn btn-secondary">View All Templates &amp; Specifications →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SIMPLE 3-STEP PROCESS
+       ========================================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          TRANSPARENT WORKFLOW
+        </div>
+        <h2 class="section-title">Simple 3-Step Process</h2>
+        <p class="lead-text">
+          No endless revisions or opaque timelines. We move swiftly from initial vision to a world-class production launch.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card reveal">
+          <div class="process-number">01</div>
+          <h3 class="process-title">Vision &amp; Blueprint</h3>
+          <p class="process-desc">
+            We analyze your brand, select or customize the perfect aesthetic foundation, and map out your content architecture in days, not weeks.
+          </p>
+          <div class="process-milestone">
+            <span>Milestone:</span> Approved Design Architecture &bull; 24–48 Hours
+          </div>
+        </div>
+
+        <div class="process-card reveal">
+          <div class="process-number">02</div>
+          <h3 class="process-title">Design &amp; Precision Code</h3>
+          <p class="process-desc">
+            Our engineers build your website with pristine static markup, smooth cinematic motion, and uncompromising attention to typography and mobile viewports.
+          </p>
+          <div class="process-milestone">
+            <span>Milestone:</span> Production-Ready Build &bull; 3–5 Business Days
+          </div>
+        </div>
+
+        <div class="process-card reveal">
+          <div class="process-number">03</div>
+          <h3 class="process-title">Edge Launch &amp; Handover</h3>
+          <p class="process-desc">
+            We deploy directly to global edge networks for fast, reliable delivery with custom domain routing, SSL security, and 100% code ownership.
+          </p>
+          <div class="process-milestone">
+            <span>Milestone:</span> Live Edge Handover &bull; 100% Sovereign Code
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HAVEN PLAY PROMOTIONAL SPOTLIGHT
+       ========================================================================= -->
+  <section class="section" style="padding-top: 1rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="play-spotlight-card reveal">
+        <div class="play-spotlight-left">
+          <div class="eyebrow" style="margin-bottom: 0.5rem;">
+            <span class="eyebrow-dot"></span>
+            DIGITAL PLAYGROUND
+          </div>
+          <h3 class="play-spotlight-title">HAVEN PLAY</h3>
+          <p class="play-spotlight-desc">&ldquo;Games, experiments &amp; a little digital chaos.&rdquo;</p>
+          <div class="play-spotlight-pills">
+            <span>5 Free Browser Games</span>
+            <span aria-hidden="true">&bull;</span>
+            <span>HAVEN Local AI Opponents</span>
+            <span aria-hidden="true">&bull;</span>
+            <span>Creative Code Labs</span>
+          </div>
+        </div>
+        <div class="play-spotlight-right">
+          <a href="play.html" class="btn btn-secondary btn-lg play-spotlight-btn" style="box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);">
+            ENTER HAVEN PLAY &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. FINAL CTA
+       ========================================================================= -->
+  <section class="section" style="padding-bottom: 7rem;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          INITIATE YOUR BUILD
+        </div>
+        <h2 class="cta-title">Have a vision? <br><span class="gradient-text">Let's build it.</span></h2>
+        <p class="lead-text" style="margin-left: auto; margin-right: auto; max-width: 620px;">
+          Whether you choose a turnkey 6-page design system or commission a bespoke flagship build, HAVEN delivers studio-grade craft, performance-focused architecture, and 100% code ownership.
+        </p>
+        <div class="cta-buttons" style="justify-content: center; gap: 1rem;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a Project <span class="arrow">&rarr;</span></a>
+        </div>
+        <div class="cta-trust-note" style="margin-top: 1.5rem;">
+          <span class="trust-check">✓</span> Prompt evaluation within 24 business hours <span class="trust-sep">·</span> Transparent pricing <span class="trust-sep">·</span> 100% code ownership
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div>
+          <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span>HAVEN</span>
+          </a>
+          <p class="footer-brand-desc">
+            Websites built for your vision. Dark cinematic aesthetics, uncompromising speed, and bespoke digital craftsmanship.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="templates.html">Templates</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="play.html">Play</a></li>
+            <li><a href="ai.html">HAVEN AI</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Templates</h4>
+          <ul class="footer-links">
+            <li><a href="templates/nexus.html">Nexus (Gaming)</a></li>
+            <li><a href="templates/vintage.html">Vintage (Restaurant)</a></li>
+            <li><a href="templates/lumi.html">Lumi (Creative)</a></li>
+            <li><a href="templates/orbit.html">Orbit (Technology)</a></li>
+            <li><a href="templates/nova.html">Nova (Business)</a></li>
+            <li><a href="templates/monarch.html">Monarch (Professional)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Project Enquiry</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 HAVEN Digital Studio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING HAVEN AI BADGE (COMING SOON) -->
+  <a href="ai.html" class="floating-ai-btn" aria-label="HAVEN AI — In Development (Coming Soon)" title="HAVEN AI (Coming Soon)">
+    <span class="ai-sparkle">✦</span>
+    <span>HAVEN AI</span>
+    <span class="floating-ai-badge">Soon</span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

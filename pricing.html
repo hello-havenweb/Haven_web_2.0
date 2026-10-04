@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — HAVEN Digital Studio</title>
+  <meta name="description" content="Transparent, fixed-price packages for premium websites. Choose from template kickstarts, studio signature builds, or bespoke digital flagships.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <nav class="nav-wrap" aria-label="Main Navigation">
+        <!-- 1. LEFT BRAND ANCHOR -->
+        <div class="nav-brand-wrap">
+          <a href="index.html" class="nav-brand" aria-label="HAVEN — Home">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="brand-text">HAVEN</span>
+          </a>
+        </div>
+
+        <!-- 2. CENTER MAIN NAVIGATION -->
+        <div class="nav-menu-wrap">
+          <ul class="nav-menu" id="primary-nav-menu">
+            <li class="mobile-drawer-header" aria-hidden="true">
+              <div class="mobile-drawer-brand">
+                <span class="mobile-drawer-logo">HAVEN</span>
+                <span class="mobile-drawer-tagline">DIGITAL STUDIO</span>
+              </div>
+              <button class="mobile-drawer-close" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="templates.html" class="nav-link">Templates</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="ai.html" class="nav-link nav-link-feature nav-link-ai" title="HAVEN AI Consultation">
+                <span class="nav-feature-sparkle" aria-hidden="true">✦</span>
+                <span>HAVEN AI</span>
+              </a>
+            </li>
+            <li>
+              <a href="play.html" class="nav-link nav-link-feature nav-link-play" title="HAVEN PLAY Digital Experiments">
+                <span class="nav-feature-dot" aria-hidden="true"></span>
+                <span>HAVEN PLAY</span>
+              </a>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-menu-cta-wrap">
+              <a href="contact.html" class="btn btn-primary btn-mobile-cta">
+                <span>Get Started</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <div class="mobile-drawer-footer">
+                <span>Direct Studio Commission &bull; hello.havenweb@gmail.com</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. RIGHT ACTION ANCHOR -->
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm btn-nav-cta">Get Started</a>
+          <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="primary-nav-menu" aria-expanded="false">
+            <span class="hamburger-box" aria-hidden="true">
+              <span class="hamburger-bar bar-1"></span>
+              <span class="hamburger-bar bar-2"></span>
+              <span class="hamburger-bar bar-3"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="section" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          INVESTMENT &amp; PACKAGES
+        </div>
+        <h1 class="section-title">Transparent Pricing. <span class="gradient-text">Zero Surprises.</span></h1>
+        <p class="lead-text">
+          No hidden fees or unexpected monthly retainers. You own 100% of your code and design assets outright from day one.
+        </p>
+      </div>
+
+      <!-- CURRENCY TOGGLE & CATEGORY INDICATOR -->
+      <div class="pricing-controls-row reveal">
+        <div class="currency-toggle-wrap">
+          <span class="currency-toggle-label">Select Currency:</span>
+          <div class="currency-toggle" role="group" aria-label="Toggle pricing currency">
+            <button class="currency-btn active" data-currency="pkr">PKR (₨)</button>
+            <button class="currency-btn" data-currency="usd">USD ($)</button>
+          </div>
+        </div>
+        <div class="pricing-category-pill">
+          <span>All packages include 100% sovereign code ownership</span>
+        </div>
+      </div>
+
+      <!-- SECTION: TURNKEY TEMPLATE PACKAGES -->
+      <div class="pricing-section-kicker reveal">
+        <span class="kicker-dot"></span>
+        <span class="kicker-title">Turnkey 6-Page Design Systems (Fixed Starting Pricing)</span>
+      </div>
+
+      <!-- PRICING TIERS -->
+      <div class="pricing-table-grid reveal">
+
+        <!-- TIER 1: TEMPLATE WEBSITE -->
+        <div class="pricing-mini-card" data-pkr-price="PKR 29,000" data-pkr-sub="Approx. $105 USD one-time" data-usd-price="$105 USD" data-usd-sub="Approx. PKR 29,000 one-time">
+          <div class="pkg-tier">Template Website</div>
+          <div class="pkg-price tabular-nums">PKR 29,000</div>
+          <div class="pkg-price-sub">Approx. $105 USD one-time</div>
+          <div class="pkg-desc">Turnkey 6-page production code, typography system, domain assets, and instant static deployment.</div>
+          <ul class="pkg-list">
+            <li>Choice of any HAVEN 6-page system</li>
+            <li>Custom branding &amp; typography setup</li>
+            <li>Zero monthly builder fees / 100% code ownership</li>
+            <li>Clean responsive semantic HTML5/CSS3</li>
+            <li>Delivered ready to launch in 3–5 business days</li>
+          </ul>
+          <a href="contact.html?budget=TemplateWebsite" class="btn btn-secondary btn-sm" style="width: 100%;">Select Package</a>
+        </div>
+
+        <!-- TIER 2: TEMPLATE + HOSTING (FEATURED) -->
+        <div class="pricing-mini-card featured" data-pkr-price="PKR 39,000" data-pkr-sub="Approx. $140 USD all-in" data-usd-price="$140 USD" data-usd-sub="Approx. PKR 39,000 all-in">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pkg-tier">Template + Hosting</div>
+          <div class="pkg-price tabular-nums">PKR 39,000</div>
+          <div class="pkg-price-sub">Approx. $140 USD all-in</div>
+          <div class="pkg-desc">Complete multi-page template plus 1 full year high-speed global CDN edge hosting and automated SSL.</div>
+          <ul class="pkg-list">
+            <li>Everything in Template Website</li>
+            <li>1 Year Global Edge Cloudflare/Fastly CDN</li>
+            <li>Automated SSL Certificate &amp; HTTPS</li>
+            <li>Continuous Git automated deployment</li>
+            <li>Sub-second global load performance</li>
+          </ul>
+          <a href="contact.html?budget=TemplateHosting" class="btn btn-primary btn-sm" style="width: 100%;">Select Package</a>
+        </div>
+
+        <!-- TIER 3: TEMPLATE + HOSTING + DOMAIN -->
+        <div class="pricing-mini-card" data-pkr-price="PKR 49,000" data-pkr-sub="Approx. $175 USD all-in" data-usd-price="$175 USD" data-usd-sub="Approx. PKR 49,000 all-in">
+          <div class="pkg-tier">Template + Host + Domain</div>
+          <div class="pkg-price tabular-nums">PKR 49,000</div>
+          <div class="pkg-price-sub">Approx. $175 USD all-in</div>
+          <div class="pkg-desc">The complete hands-off launch package with custom domain registration, DNS orchestration, and edge hosting.</div>
+          <ul class="pkg-list">
+            <li>Everything in Template + Hosting</li>
+            <li>1 Year Custom Domain (.com / .org / .net)</li>
+            <li>Full DNS &amp; business email routing setup</li>
+            <li>Custom OpenGraph preview cards &amp; SEO</li>
+            <li>Priority delivery &amp; dedicated launch support</li>
+          </ul>
+          <a href="contact.html?budget=TemplateHostingDomain" class="btn btn-secondary btn-sm" style="width: 100%;">Select Package</a>
+        </div>
+
+        <!-- TIER 4: CUSTOM WEBSITE ARCHITECTURE -->
+        <div class="pricing-mini-card" data-pkr-price="From PKR 69,000" data-pkr-sub="From ~$250 USD bespoke" data-usd-price="From $250 USD" data-usd-sub="From ~PKR 69,000 bespoke">
+          <div class="pkg-tier">Custom Studio Build</div>
+          <div class="pkg-price tabular-nums">From PKR 69,000</div>
+          <div class="pkg-price-sub">From ~$250 USD bespoke</div>
+          <div class="pkg-desc">For ambitious organizations requiring tailored design architecture, bespoke interactions, and unique scope.</div>
+          <ul class="pkg-list">
+            <li>Bespoke visual identity &amp; unique page layouts</li>
+            <li>Tailored interactive features &amp; motion</li>
+            <li>Dedicated Studio Creative Lead</li>
+            <li>Advanced SEO &amp; performance tuning</li>
+            <li>Direct engineering consultation &amp; support</li>
+          </ul>
+          <a href="contact.html?budget=CustomWebsite" class="btn btn-secondary btn-sm" style="width: 100%;">Discuss Custom Scope</a>
+        </div>
+
+      </div>
+
+      <!-- FEATURE COMPARISON TABLE -->
+      <div class="pricing-comparison-wrap reveal" style="margin-top: 3.5rem;">
+        <h3 class="comparison-title">Package Comparison Matrix</h3>
+        <p class="comparison-subtitle">Every package delivers production-grade static architecture with zero vendor lock-in.</p>
+
+        <div class="comparison-table-scroll">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Features &amp; Inclusions</th>
+                <th>Template Only</th>
+                <th class="col-featured">Template + Hosting</th>
+                <th>Template + Host + Domain</th>
+                <th>Custom Studio Build</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Starting Price</td>
+                <td class="tabular-nums font-mono">PKR 29k / $105</td>
+                <td class="col-featured tabular-nums font-mono">PKR 39k / $140</td>
+                <td class="tabular-nums font-mono">PKR 49k / $175</td>
+                <td class="tabular-nums font-mono">From PKR 69k / $250</td>
+              </tr>
+              <tr>
+                <td>100% Code Ownership</td>
+                <td><span class="check-mark">✓</span> Yes</td>
+                <td class="col-featured"><span class="check-mark">✓</span> Yes</td>
+                <td><span class="check-mark">✓</span> Yes</td>
+                <td><span class="check-mark">✓</span> Yes</td>
+              </tr>
+              <tr>
+                <td>6 Complete Page Systems</td>
+                <td><span class="check-mark">✓</span> Yes</td>
+                <td class="col-featured"><span class="check-mark">✓</span> Yes</td>
+                <td><span class="check-mark">✓</span> Yes</td>
+                <td><span class="check-mark">✓</span> Bespoke Scale</td>
+              </tr>
+              <tr>
+                <td>Custom Brand Setup</td>
+                <td><span class="check-mark">✓</span> Standard</td>
+                <td class="col-featured"><span class="check-mark">✓</span> Standard</td>
+                <td><span class="check-mark">✓</span> Standard</td>
+                <td><span class="check-mark">✓</span> Bespoke Identity</td>
+              </tr>
+              <tr>
+                <td>1-Year Edge CDN Hosting</td>
+                <td><span class="dash-mark">—</span> Self-hosted</td>
+                <td class="col-featured"><span class="check-mark">✓</span> Included</td>
+                <td><span class="check-mark">✓</span> Included</td>
+                <td><span class="check-mark">✓</span> Included</td>
+              </tr>
+              <tr>
+                <td>Automated SSL Security</td>
+                <td><span class="dash-mark">—</span></td>
+                <td class="col-featured"><span class="check-mark">✓</span> Included</td>
+                <td><span class="check-mark">✓</span> Included</td>
+                <td><span class="check-mark">✓</span> Included</td>
+              </tr>
+              <tr>
+                <td>Custom Domain (.com / .org)</td>
+                <td><span class="dash-mark">—</span></td>
+                <td class="col-featured"><span class="dash-mark">—</span></td>
+                <td><span class="check-mark">✓</span> 1-Year Included</td>
+                <td><span class="check-mark">✓</span> Handled</td>
+              </tr>
+              <tr>
+                <td>DNS &amp; Email Routing</td>
+                <td><span class="dash-mark">—</span></td>
+                <td class="col-featured"><span class="dash-mark">—</span></td>
+                <td><span class="check-mark">✓</span> Included</td>
+                <td><span class="check-mark">✓</span> Enterprise DNS</td>
+              </tr>
+              <tr>
+                <td>Delivery Timeline</td>
+                <td>3–5 Business Days</td>
+                <td class="col-featured">3–5 Business Days</td>
+                <td>48–72 Hours Priority</td>
+                <td>2–4 Weeks Bespoke</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PRICING SCOPE DISCLAIMER -->
+      <div class="pricing-disclaimer-box reveal" style="margin-top: 2.5rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <p>
+          <strong>Scope Clarity:</strong> Turnkey template packages provide complete 6-page design systems and initial content placement with zero ongoing platform subscription fees. Bespoke custom scopes and third-party API integrations are scoped transparently with confirmed quotes prior to commencement.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQS -->
+  <section class="section">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="lead-text">Everything you need to know about working with HAVEN.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="reveal">
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem;">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #ffffff;">Do I have to pay monthly hosting fees?</h3>
+          <p style="color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+            No! Because HAVEN crafts pure static HTML, CSS, and JS architecture, your site can be hosted 100% for free on GitHub Pages, Cloudflare Pages, or AWS S3 with zero recurring server charges.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem;">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #ffffff;">Can I connect my own custom domain?</h3>
+          <p style="color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+            Yes. We configure your DNS records to route your custom domain (e.g. yourbrand.com) with automatic SSL certificates and global CDN caching.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem;">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #ffffff;">Who owns the code and intellectual property?</h3>
+          <p style="color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+            You do. Upon project completion, all repository code, assets, typography licenses, and designs belong 100% to you. No vendor lock-in whatsoever.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span>HAVEN</span>
+          </a>
+          <p class="footer-brand-desc">
+            Websites built for your vision. Dark cinematic aesthetics, uncompromising speed, and bespoke digital craftsmanship.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="templates.html">Templates</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="play.html">Play</a></li>
+            <li><a href="ai.html">HAVEN AI</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Templates</h4>
+          <ul class="footer-links">
+            <li><a href="templates/nexus.html">Nexus (Gaming)</a></li>
+            <li><a href="templates/vintage.html">Vintage (Restaurant)</a></li>
+            <li><a href="templates/lumi.html">Lumi (Creative)</a></li>
+            <li><a href="templates/orbit.html">Orbit (Technology)</a></li>
+            <li><a href="templates/nova.html">Nova (Business)</a></li>
+            <li><a href="templates/monarch.html">Monarch (Professional)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Project Enquiry</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HAVEN Digital Studio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING HAVEN AI BADGE (COMING SOON) -->
+  <a href="ai.html" class="floating-ai-btn" aria-label="HAVEN AI — In Development (Coming Soon)" title="HAVEN AI (Coming Soon)">
+    <span class="ai-sparkle">✦</span>
+    <span>HAVEN AI</span>
+    <span class="floating-ai-badge">Soon</span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

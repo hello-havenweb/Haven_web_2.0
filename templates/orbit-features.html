@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform Features &amp; Architecture — ORBIT | HAVEN</title>
+  <meta name="description" content="Technical specifications of the Orbit vector mesh: SIMD vector kernels, zero-copy deserialization, and multi-region replication.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="templates.css">
+</head>
+<body class="orbit-body">
+
+  <div class="demo-topbar">
+    <a href="../templates.html" class="demo-back-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to HAVEN Templates
+    </a>
+    <div class="demo-title-tag">
+      <span>TEMPLATE: ORBIT (DEEP-TECH SAAS)</span>
+      <span class="demo-status-chip">PAGE 2 OF 6: FEATURES</span>
+    </div>
+    <a href="../contact.html?template=ORBIT" class="demo-topbar-cta">Get This Template</a>
+  </div>
+
+  <header class="orbit-nav">
+    <a href="orbit.html" class="orbit-brand">
+      <div class="orbit-brand-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+      </div>
+      ORBIT<span style="font-weight: 400; color: #94a3b8; font-size: 0.85rem; margin-left: 2px;">CLOUD</span>
+    </a>
+    <nav>
+      <ul class="orbit-links">
+        <li><a href="orbit.html">Platform</a></li>
+        <li><a href="orbit-features.html" class="active">Features</a></li>
+        <li><a href="orbit-solutions.html">Solutions</a></li>
+        <li><a href="orbit-pricing.html">Pricing</a></li>
+        <li><a href="orbit-faq.html">FAQ</a></li>
+        <li><a href="orbit-contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="orbit-contact.html" class="orbit-cta-btn">Start Sandbox &rarr;</a>
+  </header>
+
+  <section class="orbit-hero" style="padding-bottom: 2rem;">
+    <div class="orbit-container">
+      <div class="orbit-badge">LOW-LEVEL ARCHITECTURE</div>
+      <h1 class="orbit-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">
+        Built for Pure Computational Throughput
+      </h1>
+      <p class="orbit-desc">
+        Orbit bypasses standard Linux networking bottlenecks using io_uring and AVX-512 SIMD vector quantization.
+      </p>
+    </div>
+  </section>
+
+  <section class="orbit-section" style="padding-top: 2rem;">
+    <div class="orbit-container">
+      <div class="orbit-feature-grid">
+
+        <div class="orbit-card">
+          <div class="orbit-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="orbit-card-title">AVX-512 SIMD Quantization</h3>
+          <p class="orbit-card-desc">
+            Product quantization (PQ8 and PQ4) reduces embedding memory footprints by up to 96% while maintaining &gt;99.2% recall accuracy against uncompressed float32 baselines.
+          </p>
+        </div>
+
+        <div class="orbit-card">
+          <div class="orbit-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          </div>
+          <h3 class="orbit-card-title">Distributed Raft Consensus</h3>
+          <p class="orbit-card-desc">
+            Built-in multi-region active-active cluster synchronization. Metadata commits achieve consensus across three continents in less than 35ms.
+          </p>
+        </div>
+
+        <div class="orbit-card">
+          <div class="orbit-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <h3 class="orbit-card-title">Hybrid BM25 + Dense Search</h3>
+          <p class="orbit-card-desc">
+            Combine semantic neural embeddings with exact keyword BM25 scoring in a single query pipeline with dynamic Reciprocal Rank Fusion (RRF).
+          </p>
+        </div>
+
+        <div class="orbit-card">
+          <div class="orbit-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 class="orbit-card-title">Zero-Copy Ingestion Streams</h3>
+          <p class="orbit-card-desc">
+            Native Apache Kafka and Apache Flink connectors ingest up to 250,000 document vectors per second directly into memory-mapped segment buffers.
+          </p>
+        </div>
+
+        <div class="orbit-card">
+          <div class="orbit-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="orbit-card-title">Sub-Millisecond Filter Execution</h3>
+          <p class="orbit-card-desc">
+            Bitset-indexed metadata payloads let you filter millions of vectors by tenant ID, access control tags, or timestamps before graph traversal begins.
+          </p>
+        </div>
+
+        <div class="orbit-card">
+          <div class="orbit-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3 class="orbit-card-title">Prometheus &amp; OpenTelemetry</h3>
+          <p class="orbit-card-desc">
+            Over 140 metrics exported out of the box for cache hit ratios, segment merges, SIMD vector instructions, and cluster query saturation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="orbit-footer">
+    <div class="orbit-container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; margin-bottom: 3rem;">
+      <div>
+        <div class="orbit-brand" style="margin-bottom: 1rem;">
+          <div class="orbit-brand-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          ORBIT<span style="font-weight: 400; color: #94a3b8; font-size: 0.85rem; margin-left: 2px;">CLOUD</span>
+        </div>
+        <p style="max-width: 320px; font-size: 0.85rem; color: #64748b; line-height: 1.6;">
+          Distributed edge runtime and high-concurrency vector database engine. Built with HAVEN template craft.
+        </p>
+      </div>
+
+      <div>
+        <div style="font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 1rem; text-transform: uppercase;">PRODUCT</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem;">
+          <li><a href="orbit.html">Platform</a></li>
+          <li><a href="orbit-features.html">Engine Features</a></li>
+          <li><a href="orbit-solutions.html">Solutions Architecture</a></li>
+          <li><a href="orbit-pricing.html">Pricing Calculator</a></li>
+          <li><a href="orbit-faq.html">Technical FAQ</a></li>
+          <li><a href="orbit-contact.html">Sales &amp; Enterprise</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 1rem; text-transform: uppercase;">DEMO NOTICE</div>
+        <p style="max-width: 300px; font-size: 0.82rem; color: #475569; line-height: 1.6;">
+          This SaaS website is a fully functional design system demonstration. Product names, metrics, and cloud benchmarks are fictional illustrative examples.
+        </p>
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: #475569; flex-wrap: wrap; gap: 1rem;">
+      <div>&copy; 2026 ORBIT CLOUD TECHNOLOGIES &bull; HAVEN Templates.</div>
+      <div>Privacy Policy &bull; SLA Status: 99.999% Available</div>
+    </div>
+  </footer>
+
+</body>
+</html>
