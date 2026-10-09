@@ -1,6 +1,6 @@
 {
-  "name": "HAVEN — Websites Built for Your Vision",
-  "description": "Premium website-building and digital experience studio. Explore bespoke templates, custom craft, and cinematic web design.",
+  "name": "HAVEN — Premium Web Design & Digital Experiences",
+  "description": "Bespoke website-building and digital experience studio crafting multi-page templates and cinematic web design.",
   "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

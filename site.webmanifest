@@ -1,0 +1,21 @@
+{
+  "name": "HAVEN — Premium Web Design & Digital Experiences",
+  "short_name": "HAVEN",
+  "description": "Bespoke website-building and digital experience studio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e1411",
+  "theme_color": "#0e1411",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

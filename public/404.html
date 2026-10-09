@@ -1,20 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>HAVEN — Websites Built for Your Vision</title>
-    <script>
-      // SPA redirect for GitHub Pages custom domain / repository subpath
-      var segmentCount = 1;
-      var loc = window.location;
-      var repoBase = loc.pathname.split('/').slice(0, 1 + segmentCount).join('/');
-      var subPath = loc.pathname.slice(1).split('/').slice(segmentCount).join('/');
-      var query = loc.search ? loc.search : '';
-      var hash = loc.hash ? loc.hash : (subPath ? '#' + subPath : '');
-      loc.replace(repoBase + '/' + query + hash);
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to HAVEN...</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — HAVEN</title>
+  <meta name="description" content="The requested page could not be found. Return to HAVEN's digital sanctuary to explore premium website templates, studio services, or contact our team.">
+  <link rel="canonical" href="https://haven.studio/404.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0e1411">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="HAVEN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Page Not Found — HAVEN">
+  <meta property="og:description" content="The requested page could not be found. Return to HAVEN's digital sanctuary to explore premium website templates, studio services, or contact our team.">
+  <meta property="og:image" content="assets/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HAVEN — Premium Web Design & Digital Experiences">
+  <meta property="og:url" content="https://haven.studio/404.html">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Page Not Found — HAVEN">
+  <meta name="twitter:description" content="The requested page could not be found. Return to HAVEN's digital sanctuary to explore premium website templates, studio services, or contact our team.">
+  <meta name="twitter:image" content="assets/og-preview.jpg">
+  <meta name="twitter:image:alt" content="HAVEN — Premium Web Design & Digital Experiences">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SKIP TO CONTENT -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <nav class="nav-wrap" aria-label="Main Navigation">
+        <!-- 1. LEFT BRAND ANCHOR -->
+        <div class="nav-brand-wrap">
+          <a href="index.html" class="nav-brand" aria-label="HAVEN — Home">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="brand-text">HAVEN</span>
+          </a>
+        </div>
+
+        <!-- 2. CENTER MAIN NAVIGATION -->
+        <div class="nav-menu-wrap">
+          <ul class="nav-menu" id="primary-nav-menu">
+            <li class="mobile-drawer-header" aria-hidden="true">
+              <div class="mobile-drawer-brand">
+                <span class="mobile-drawer-logo">HAVEN</span>
+                <span class="mobile-drawer-tagline">DIGITAL STUDIO</span>
+              </div>
+              <button class="mobile-drawer-close" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="templates.html" class="nav-link">Templates</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="ai.html" class="nav-link nav-link-feature nav-link-ai" title="HAVEN AI Consultation">
+                <span class="nav-feature-sparkle" aria-hidden="true">✦</span>
+                <span>HAVEN AI</span>
+              </a>
+            </li>
+            <li>
+              <a href="play.html" class="nav-link nav-link-feature nav-link-play" title="HAVEN PLAY Digital Experiments">
+                <span class="nav-feature-dot" aria-hidden="true"></span>
+                <span>HAVEN PLAY</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. RIGHT UTILITY -->
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Start Project</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN 404 SANCTUARY CONTENT -->
+  <main id="main-content" class="sanctuary-404-wrap">
+    <div class="ambient-atmospheric-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="sanctuary-404-card reveal active">
+        <!-- SUBTLE WOLF IDENTITY CREST -->
+        <div class="sanctuary-404-wolf-crest" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="wolfCrestGrad404" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d6af68" stop-opacity="0.9" />
+                <stop offset="50%" stop-color="#b88f4c" stop-opacity="0.7" />
+                <stop offset="100%" stop-color="#233a2d" stop-opacity="0.3" />
+              </linearGradient>
+              <radialGradient id="wolfEyeGleam404" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+                <stop offset="40%" stop-color="#fbf9f5" stop-opacity="0.95" />
+                <stop offset="100%" stop-color="#d6af68" stop-opacity="0.8" />
+              </radialGradient>
+            </defs>
+            <!-- Stylized Geometric Sanctuary Wolf Crest -->
+            <polygon points="60,12 86,40 76,55 94,82 60,108 26,82 44,55 34,40" stroke="url(#wolfCrestGrad404)" stroke-width="1.8" fill="rgba(35, 58, 45, 0.2)" stroke-linejoin="round" />
+            <path d="M34 40 L60 62 L86 40" stroke="rgba(184, 143, 76, 0.45)" stroke-width="1.2" fill="none" />
+            <path d="M44 55 L60 74 L76 55" stroke="rgba(184, 143, 76, 0.45)" stroke-width="1.2" fill="none" />
+            <path d="M60 12 L60 108" stroke="rgba(184, 143, 76, 0.2)" stroke-width="1" stroke-dasharray="2 3" />
+            <!-- Glowing Eyes -->
+            <ellipse cx="51" cy="56" rx="2.5" ry="1.4" fill="url(#wolfEyeGleam404)" transform="rotate(-6 51 56)" />
+            <ellipse cx="69" cy="56" rx="2.5" ry="1.4" fill="url(#wolfEyeGleam404)" transform="rotate(6 69 56)" />
+          </svg>
+        </div>
+
+        <div class="eyebrow" style="margin-bottom: 0.75rem;">ERROR 404 &bull; SANCTUARY UNCHARTED</div>
+        
+        <h1 style="font-size: 2.75rem; font-family: var(--font-display); line-height: 1.15; margin-bottom: 1rem; color: #ffffff;">
+          This page couldn't be found.
+        </h1>
+        
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; margin: 0 auto 1.5rem; max-width: 480px;">
+          The coordinates you entered do not exist or may have shifted within the digital landscape. Return to the sanctuary or explore our available pathways below.
+        </p>
+
+        <!-- 3 REQUIRED BUTTONS -->
+        <div class="sanctuary-404-actions">
+          <a href="index.html" class="btn btn-primary btn-md">Back Home</a>
+          <a href="templates.html" class="btn btn-secondary btn-md">View Templates</a>
+          <a href="contact.html" class="btn btn-secondary btn-md">Contact HAVEN</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="brand-text">HAVEN</span>
+          </div>
+          <p class="footer-tagline">Websites built for your vision. High-performance design systems, bespoke architecture, and nocturnal vigilance.</p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <div class="footer-col-title">Navigation</div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="templates.html">Templates</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Systems</div>
+            <ul>
+              <li><a href="templates/nexus.html">Nexus (Gaming)</a></li>
+              <li><a href="templates/vintage.html">Vintage (Dining)</a></li>
+              <li><a href="templates/ember-oak.html">Ember &amp; Oak (Fire)</a></li>
+              <li><a href="templates/lumi.html">Lumi (Creative)</a></li>
+              <li><a href="templates/orbit.html">Orbit (SaaS)</a></li>
+              <li><a href="templates/nova.html">Nova (Advisory)</a></li>
+              <li><a href="templates/monarch.html">Monarch (Brand)</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Studio</div>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="ai.html">HAVEN AI</a></li>
+              <li><a href="play.html">HAVEN PLAY</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 HAVEN Digital Studio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span class="sep" aria-hidden="true">&bull;</span>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

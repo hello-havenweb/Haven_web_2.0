@@ -1,0 +1,1509 @@
+/* ==========================================================================
+   EMBER & OAK — WOOD-FIRED HEARTH & DINING ROOM
+   A Quiet Luxury Restaurant Template for the HAVEN Suite
+   Aesthetic: Dark Walnut Wood, Deep Espresso, Charcoal, Warm Cream, Aged Bronze
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --eo-bg-root: #0e0b09;
+  --eo-bg-wood: #15100d;
+  --eo-bg-espresso: #1c1512;
+  --eo-bg-hearth: #241a15;
+  --eo-bg-surface: #1e1713;
+  --eo-bg-surface-elevated: #261e18;
+
+  --eo-cream: #f4ecdc;
+  --eo-cream-muted: #dcd0bc;
+  --eo-beige: #b8a892;
+  --eo-sand: #8e8070;
+  --eo-faint: #5a4f44;
+
+  --eo-bronze: #b59163;
+  --eo-bronze-light: #c9a778;
+  --eo-bronze-dark: #8c6e45;
+  --eo-bronze-glow: rgba(181, 145, 99, 0.18);
+
+  --eo-border-subtle: rgba(181, 145, 99, 0.14);
+  --eo-border-hover: rgba(181, 145, 99, 0.38);
+  --eo-border-divider: rgba(220, 208, 188, 0.08);
+
+  --eo-font-serif: 'Playfair Display', Georgia, serif;
+  --eo-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --eo-font-mono: 'JetBrains Mono', monospace;
+
+  --eo-transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --eo-shadow-cinematic: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(18, 14, 12, 0.8);
+}
+
+/* RESET & BASE */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body.ember-body {
+  background-color: var(--eo-bg-root);
+  color: var(--eo-cream-muted);
+  font-family: var(--eo-font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* AMBIENT CANDLELIGHT BACKGROUND GLOW */
+.ember-ambient-light {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ember-ambient-light::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 60vw;
+  height: 60vh;
+  background: radial-gradient(circle, rgba(181, 145, 99, 0.055) 0%, rgba(181, 145, 99, 0.015) 50%, transparent 75%);
+  filter: blur(80px);
+  animation: candleFlicker 14s ease-in-out infinite alternate;
+}
+
+.ember-ambient-light::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  width: 50vw;
+  height: 50vh;
+  background: radial-gradient(circle, rgba(160, 110, 60, 0.04) 0%, rgba(181, 145, 99, 0.01) 50%, transparent 70%);
+  filter: blur(90px);
+  animation: candleFlicker 18s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes candleFlicker {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  35% { transform: translate(-30px, 20px) scale(1.08); opacity: 0.95; }
+  70% { transform: translate(25px, -25px) scale(0.96); opacity: 0.65; }
+  100% { transform: translate(10px, 15px) scale(1.04); opacity: 0.85; }
+}
+
+/* TOPBAR DEMO CONTROL */
+.ember-demo-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 1.75rem;
+  background: rgba(14, 11, 9, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(181, 145, 99, 0.15);
+  font-family: var(--eo-font-sans);
+  font-size: 0.82rem;
+  color: var(--eo-cream-muted);
+}
+
+.ember-demo-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--eo-beige);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--eo-transition);
+}
+
+.ember-demo-back:hover {
+  color: var(--eo-cream);
+}
+
+.ember-demo-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--eo-font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: var(--eo-cream);
+}
+
+.ember-demo-chip {
+  padding: 0.15rem 0.55rem;
+  background: rgba(181, 145, 99, 0.15);
+  border: 1px solid var(--eo-border-subtle);
+  color: var(--eo-bronze-light);
+  font-size: 0.68rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ember-demo-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  background: var(--eo-bg-espresso);
+  border: 1px solid var(--eo-border-subtle);
+  color: var(--eo-cream);
+  text-decoration: none;
+  font-size: 0.76rem;
+  border-radius: 4px;
+  transition: var(--eo-transition);
+}
+
+.ember-demo-cta:hover {
+  background: var(--eo-bronze);
+  color: #0e0b09;
+  border-color: var(--eo-bronze);
+}
+
+/* NAVBAR */
+.ember-nav-wrap {
+  position: sticky;
+  top: 38px;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.ember-nav-wrap.scrolled {
+  background: rgba(14, 11, 9, 0.94);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--eo-border-subtle);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.ember-nav {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: padding 0.4s ease;
+}
+
+.ember-nav-wrap.scrolled .ember-nav {
+  padding: 0.9rem 2rem;
+}
+
+/* BRAND LOGO */
+.ember-brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--eo-cream);
+}
+
+.ember-brand-name {
+  font-family: var(--eo-font-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--eo-cream);
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ember-brand-amp {
+  font-family: var(--eo-font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--eo-bronze);
+  font-size: 1.4rem;
+}
+
+.ember-brand-tagline {
+  font-family: var(--eo-font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--eo-sand);
+  margin-top: 0.25rem;
+}
+
+/* NAV LINKS */
+.ember-nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.2rem;
+}
+
+.ember-nav-link {
+  color: var(--eo-beige);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.25s ease;
+}
+
+.ember-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--eo-bronze);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ember-nav-link:hover,
+.ember-nav-link.active {
+  color: var(--eo-cream);
+}
+
+.ember-nav-link:hover::after,
+.ember-nav-link.active::after {
+  width: 100%;
+}
+
+/* NAV ACTION */
+.ember-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ember-btn-reserve {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.72rem 1.6rem;
+  background: rgba(181, 145, 99, 0.12);
+  border: 1px solid var(--eo-bronze);
+  color: var(--eo-cream);
+  font-family: var(--eo-font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: var(--eo-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.ember-btn-reserve:hover {
+  background: var(--eo-bronze);
+  color: #0e0b09;
+  box-shadow: 0 0 25px var(--eo-bronze-glow);
+  transform: translateY(-2px);
+}
+
+.ember-btn-reserve:active {
+  transform: translateY(0);
+}
+
+/* MOBILE TOGGLE */
+.ember-nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--eo-border-subtle);
+  color: var(--eo-cream);
+  width: 42px;
+  height: 42px;
+  border-radius: 2px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.ember-nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--eo-cream);
+  transition: var(--eo-transition);
+}
+
+/* MOBILE DRAWER */
+.ember-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 11, 9, 0.98);
+  backdrop-filter: blur(24px);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ember-mobile-drawer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ember-mobile-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: 1px solid var(--eo-border-subtle);
+  color: var(--eo-cream);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ember-mobile-links {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.ember-mobile-link {
+  font-family: var(--eo-font-serif);
+  font-size: 1.9rem;
+  color: var(--eo-cream);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.ember-mobile-link:hover {
+  color: var(--eo-bronze);
+}
+
+/* CONTAINER */
+.ember-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ember-container-narrow {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* SECTION COMMONS */
+.ember-section {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ember-section-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.ember-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--eo-font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--eo-bronze);
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+
+.ember-kicker::before,
+.ember-kicker::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--eo-bronze);
+  opacity: 0.6;
+}
+
+.ember-heading {
+  font-family: var(--eo-font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  color: var(--eo-cream);
+  letter-spacing: 0.06em;
+  line-height: 1.18;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.ember-lead {
+  font-size: 1.05rem;
+  color: var(--eo-beige);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.ember-hero {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  overflow: hidden;
+  background-color: var(--eo-bg-wood);
+}
+
+.ember-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ember-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.62) contrast(1.08);
+  transform: scale(1.02);
+  transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ember-hero:hover .ember-hero-bg img {
+  transform: scale(1.06);
+}
+
+.ember-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 11, 9, 0.72) 0%,
+    rgba(14, 11, 9, 0.45) 40%,
+    rgba(14, 11, 9, 0.85) 85%,
+    var(--eo-bg-root) 100%
+  );
+  z-index: 1;
+}
+
+.ember-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.ember-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: rgba(22, 17, 14, 0.82);
+  border: 1px solid var(--eo-border-subtle);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--eo-bronze-light);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.ember-hero-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--eo-bronze);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--eo-bronze);
+}
+
+.ember-hero-title {
+  font-family: var(--eo-font-serif);
+  font-size: clamp(3rem, 7.5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--eo-cream);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
+.ember-hero-tagline {
+  font-family: var(--eo-font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  color: var(--eo-bronze);
+  letter-spacing: 0.12em;
+  margin-bottom: 1.8rem;
+}
+
+.ember-hero-desc {
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  color: var(--eo-cream-muted);
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  line-height: 1.85;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.ember-hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ember-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: var(--eo-bronze);
+  color: #0e0b09;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid var(--eo-bronze-light);
+  transition: var(--eo-transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.ember-btn-primary:hover {
+  background: var(--eo-bronze-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px var(--eo-bronze-glow);
+}
+
+.ember-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.4rem;
+  background: rgba(22, 17, 14, 0.75);
+  color: var(--eo-cream);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid var(--eo-border-subtle);
+  backdrop-filter: blur(8px);
+  transition: var(--eo-transition);
+}
+
+.ember-btn-secondary:hover {
+  background: rgba(30, 23, 19, 0.95);
+  border-color: var(--eo-bronze);
+  color: var(--eo-cream);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   2. OUR STORY (ROOTED IN FIRE)
+   ========================================================================== */
+.ember-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.ember-story-visual {
+  position: relative;
+}
+
+.ember-story-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid var(--eo-border-subtle);
+  box-shadow: var(--eo-shadow-cinematic);
+}
+
+.ember-story-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.85) contrast(1.08);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ember-story-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.ember-story-badge-frame {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--eo-bg-espresso);
+  border: 1px solid var(--eo-border-subtle);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.ember-badge-num {
+  font-family: var(--eo-font-serif);
+  font-size: 2.2rem;
+  color: var(--eo-bronze);
+  line-height: 1;
+}
+
+.ember-badge-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--eo-beige);
+  margin-top: 0.35rem;
+}
+
+.ember-story-copy .ember-heading {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.ember-story-text {
+  font-size: 1.05rem;
+  color: var(--eo-cream-muted);
+  line-height: 1.9;
+  margin-bottom: 1.75rem;
+}
+
+.ember-story-quote {
+  padding: 1.5rem 1.8rem;
+  margin: 2.5rem 0;
+  border-left: 2px solid var(--eo-bronze);
+  background: rgba(28, 21, 18, 0.55);
+  font-family: var(--eo-font-serif);
+  font-style: italic;
+  font-size: 1.22rem;
+  color: var(--eo-cream);
+  line-height: 1.7;
+}
+
+.ember-story-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.ember-feature-item {
+  border-top: 1px solid var(--eo-border-divider);
+  padding-top: 1.25rem;
+}
+
+.ember-feature-title {
+  font-family: var(--eo-font-serif);
+  font-size: 1.15rem;
+  color: var(--eo-cream);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+
+.ember-feature-desc {
+  font-size: 0.88rem;
+  color: var(--eo-sand);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. MENU SECTION
+   ========================================================================== */
+.ember-menu-section {
+  background: linear-gradient(180deg, var(--eo-bg-root) 0%, var(--eo-bg-wood) 50%, var(--eo-bg-root) 100%);
+  border-top: 1px solid var(--eo-border-divider);
+  border-bottom: 1px solid var(--eo-border-divider);
+}
+
+.ember-menu-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.ember-menu-tab {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--eo-beige);
+  font-family: var(--eo-font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--eo-transition);
+}
+
+.ember-menu-tab:hover {
+  color: var(--eo-cream);
+  border-color: var(--eo-border-subtle);
+}
+
+.ember-menu-tab.active {
+  background: var(--eo-bg-espresso);
+  border-color: var(--eo-bronze);
+  color: var(--eo-bronze-light);
+}
+
+.ember-menu-view {
+  display: none;
+}
+
+.ember-menu-view.active {
+  display: block;
+  animation: fadeInMenu 0.45s ease forwards;
+}
+
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ember-menu-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ember-dish {
+  border-bottom: 1px solid var(--eo-border-divider);
+  padding-bottom: 1.8rem;
+  transition: var(--eo-transition);
+}
+
+.ember-dish:hover {
+  border-bottom-color: var(--eo-border-hover);
+}
+
+.ember-dish-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.ember-dish-name {
+  font-family: var(--eo-font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--eo-cream);
+  transition: color 0.25s ease;
+}
+
+.ember-dish:hover .ember-dish-name {
+  color: var(--eo-bronze-light);
+}
+
+.ember-dish-dots {
+  flex: 1;
+  border-bottom: 1px dotted rgba(181, 145, 99, 0.25);
+  margin: 0 0.5rem;
+  height: 1px;
+}
+
+.ember-dish-price {
+  font-family: var(--eo-font-mono);
+  font-size: 1.05rem;
+  color: var(--eo-bronze);
+  font-weight: 500;
+}
+
+.ember-dish-desc {
+  font-size: 0.92rem;
+  color: var(--eo-sand);
+  line-height: 1.65;
+}
+
+.ember-dish-tag {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--eo-bronze);
+  font-family: var(--eo-font-mono);
+}
+
+/* ==========================================================================
+   4. SIGNATURE DISH FEATURE (THE EMBER CUT)
+   ========================================================================== */
+.ember-signature-section {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+  background: var(--eo-bg-wood);
+}
+
+.ember-signature-card {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  background: var(--eo-bg-espresso);
+  border: 1px solid var(--eo-border-subtle);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: var(--eo-shadow-cinematic);
+}
+
+.ember-signature-media {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.ember-signature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.88) contrast(1.1);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ember-signature-card:hover .ember-signature-media img {
+  transform: scale(1.05);
+}
+
+.ember-signature-pill {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.4rem 1.1rem;
+  background: rgba(14, 11, 9, 0.88);
+  border: 1px solid var(--eo-border-subtle);
+  color: var(--eo-bronze-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  border-radius: 2px;
+}
+
+.ember-signature-info {
+  padding: 4.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ember-signature-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--eo-bronze);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.ember-signature-title {
+  font-family: var(--eo-font-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eo-cream);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.ember-signature-desc {
+  font-size: 1.05rem;
+  color: var(--eo-cream-muted);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+.ember-signature-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid var(--eo-border-divider);
+  padding-top: 1.5rem;
+}
+
+.ember-spec-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.ember-spec-label {
+  color: var(--eo-sand);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.ember-spec-val {
+  color: var(--eo-cream);
+  font-family: var(--eo-font-mono);
+}
+
+/* ==========================================================================
+   5. EXPERIENCE (THE FIRE / THE TABLE / THE EVENING)
+   ========================================================================== */
+.ember-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.ember-exp-block {
+  background: var(--eo-bg-wood);
+  border: 1px solid var(--eo-border-subtle);
+  padding: 3.5rem 2.5rem;
+  border-radius: 2px;
+  position: relative;
+  transition: var(--eo-transition);
+  overflow: hidden;
+}
+
+.ember-exp-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--eo-bronze), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.ember-exp-block:hover {
+  transform: translateY(-5px);
+  border-color: var(--eo-border-hover);
+  background: var(--eo-bg-espresso);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+.ember-exp-block:hover::before {
+  opacity: 1;
+}
+
+.ember-exp-num {
+  font-family: var(--eo-font-mono);
+  font-size: 3.8rem;
+  font-weight: 300;
+  color: rgba(181, 145, 99, 0.28);
+  line-height: 1;
+  margin-bottom: 1.75rem;
+  transition: color 0.3s ease;
+}
+
+.ember-exp-block:hover .ember-exp-num {
+  color: var(--eo-bronze);
+}
+
+.ember-exp-title {
+  font-family: var(--eo-font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eo-cream);
+  margin-bottom: 1.1rem;
+}
+
+.ember-exp-desc {
+  font-size: 0.96rem;
+  color: var(--eo-sand);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   6. GALLERY SECTION
+   ========================================================================== */
+.ember-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.ember-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid var(--eo-border-subtle);
+  background: var(--eo-bg-espresso);
+  cursor: pointer;
+}
+
+.ember-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.82) contrast(1.1);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.ember-gallery-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.95) contrast(1.08);
+}
+
+.ember-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(14, 11, 9, 0.92) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.75rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.ember-gallery-item:hover .ember-gallery-overlay {
+  opacity: 1;
+}
+
+.ember-gallery-caption {
+  font-family: var(--eo-font-serif);
+  font-size: 1.15rem;
+  color: var(--eo-cream);
+  letter-spacing: 0.06em;
+}
+
+.ember-gallery-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--eo-bronze);
+  margin-bottom: 0.25rem;
+}
+
+/* Layout spans for gallery */
+.ember-gal-1 { grid-column: span 7; min-height: 440px; }
+.ember-gal-2 { grid-column: span 5; min-height: 440px; }
+.ember-gal-3 { grid-column: span 4; min-height: 380px; }
+.ember-gal-4 { grid-column: span 4; min-height: 380px; }
+.ember-gal-5 { grid-column: span 4; min-height: 380px; }
+
+/* ==========================================================================
+   7. CHEF SECTION (CHEF ADRIAN VALE)
+   ========================================================================== */
+.ember-chef-section {
+  border-top: 1px solid var(--eo-border-divider);
+  background: var(--eo-bg-wood);
+}
+
+.ember-chef-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.ember-chef-media {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--eo-border-subtle);
+  box-shadow: var(--eo-shadow-cinematic);
+}
+
+.ember-chef-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.88) contrast(1.06);
+}
+
+.ember-chef-content {
+  padding-right: 2rem;
+}
+
+.ember-chef-quote {
+  font-family: var(--eo-font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--eo-cream);
+  line-height: 1.35;
+  margin: 1.5rem 0 2rem;
+  position: relative;
+}
+
+.ember-chef-name {
+  font-family: var(--eo-font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--eo-bronze-light);
+  margin-bottom: 0.35rem;
+}
+
+.ember-chef-role {
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--eo-sand);
+  margin-bottom: 1.75rem;
+}
+
+.ember-chef-bio {
+  font-size: 1.02rem;
+  color: var(--eo-cream-muted);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.ember-chef-demo-note {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: rgba(28, 21, 18, 0.7);
+  border: 1px solid var(--eo-border-subtle);
+  border-radius: 2px;
+  font-family: var(--eo-font-mono);
+  font-size: 0.7rem;
+  color: var(--eo-beige);
+}
+
+/* ==========================================================================
+   8. RESERVATIONS
+   ========================================================================== */
+.ember-reservations-section {
+  position: relative;
+  background: linear-gradient(180deg, var(--eo-bg-root) 0%, var(--eo-bg-espresso) 100%);
+  border-top: 1px solid var(--eo-border-divider);
+}
+
+.ember-res-card {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--eo-bg-wood);
+  border: 1px solid var(--eo-border-subtle);
+  padding: 4rem 4.5rem;
+  border-radius: 2px;
+  box-shadow: var(--eo-shadow-cinematic);
+}
+
+.ember-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.ember-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ember-field.full-width {
+  grid-column: span 2;
+}
+
+.ember-label {
+  font-family: var(--eo-font-sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--eo-beige);
+  font-weight: 600;
+}
+
+.ember-input,
+.ember-select,
+.ember-textarea {
+  background: var(--eo-bg-espresso);
+  border: 1px solid var(--eo-border-subtle);
+  color: var(--eo-cream);
+  font-family: var(--eo-font-sans);
+  font-size: 0.95rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 2px;
+  outline: none;
+  transition: var(--eo-transition);
+}
+
+.ember-input:focus,
+.ember-select:focus,
+.ember-textarea:focus {
+  border-color: var(--eo-bronze);
+  box-shadow: 0 0 15px rgba(181, 145, 99, 0.15);
+}
+
+.ember-textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+
+.ember-disclaimer-box {
+  margin: 1.5rem 0 2rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(181, 145, 99, 0.08);
+  border-left: 2px solid var(--eo-bronze);
+  font-size: 0.82rem;
+  color: var(--eo-beige);
+  line-height: 1.6;
+}
+
+.ember-res-feedback {
+  display: none;
+  padding: 2.5rem;
+  background: rgba(22, 17, 14, 0.95);
+  border: 1px solid var(--eo-bronze);
+  border-radius: 2px;
+  text-align: center;
+  animation: fadeInMenu 0.4s ease forwards;
+}
+
+.ember-res-feedback.active {
+  display: block;
+}
+
+.ember-feedback-icon {
+  font-size: 2rem;
+  color: var(--eo-bronze);
+  margin-bottom: 1rem;
+}
+
+.ember-feedback-title {
+  font-family: var(--eo-font-serif);
+  font-size: 1.8rem;
+  color: var(--eo-cream);
+  margin-bottom: 0.75rem;
+}
+
+.ember-feedback-text {
+  color: var(--eo-cream-muted);
+  font-size: 0.96rem;
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+.ember-footer {
+  background: #090706;
+  border-top: 1px solid var(--eo-border-divider);
+  padding: 6rem 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ember-footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.ember-footer-brand-desc {
+  font-size: 0.92rem;
+  color: var(--eo-sand);
+  line-height: 1.8;
+  margin-top: 1.25rem;
+  max-width: 320px;
+}
+
+.ember-footer-col-title {
+  font-family: var(--eo-font-serif);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--eo-cream);
+  margin-bottom: 1.4rem;
+}
+
+.ember-footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ember-footer-link {
+  color: var(--eo-sand);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.ember-footer-link:hover {
+  color: var(--eo-bronze-light);
+}
+
+.ember-footer-info {
+  font-size: 0.9rem;
+  color: var(--eo-sand);
+  line-height: 1.75;
+}
+
+.ember-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--eo-border-divider);
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--eo-faint);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ember-footer-legal-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.ember-footer-legal-links a {
+  color: var(--eo-faint);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ember-footer-legal-links a:hover {
+  color: var(--eo-beige);
+}
+
+/* REVEAL ANIMATIONS */
+.ember-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ember-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1040px) {
+  .ember-story-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .ember-story-badge-frame {
+    right: 1rem;
+    bottom: -1rem;
+  }
+  .ember-signature-card {
+    grid-template-columns: 1fr;
+  }
+  .ember-signature-media {
+    min-height: 380px;
+  }
+  .ember-signature-info {
+    padding: 3rem 2.5rem;
+  }
+  .ember-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  .ember-chef-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .ember-chef-content {
+    padding-right: 0;
+  }
+  .ember-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .ember-gal-1, .ember-gal-2, .ember-gal-3, .ember-gal-4, .ember-gal-5 {
+    grid-column: span 12;
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ember-nav-links,
+  .ember-btn-reserve {
+    display: none;
+  }
+  .ember-nav-toggle {
+    display: flex;
+  }
+  .ember-menu-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .ember-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .ember-field.full-width {
+    grid-column: span 1;
+  }
+  .ember-res-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .ember-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .ember-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ember-btn-primary, .ember-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .ember-story-features {
+    grid-template-columns: 1fr;
+  }
+}

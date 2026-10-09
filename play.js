@@ -966,7 +966,7 @@
             <div id="wolf-start-overlay" class="wolf-overlay-screen">
               <h3 style="font-family: var(--font-display); font-size: 2rem; color: #ffffff; margin-bottom: 0.5rem;">WOLF RUN</h3>
               <p style="color: var(--accent-lilac); font-size: 0.95rem; max-width: 480px; margin-bottom: 1.5rem; line-height: 1.5;">
-                Run through the nocturnal cyberpunk plains. Jump over obsidian spires and collect violet energy orbs. Double-jump is enabled!
+                Run through the nocturnal misty pine forest. Jump over charcoal ridge spires and collect bronze energy orbs. Double-jump is enabled!
               </p>
               <button id="wolf-start-play-btn" class="btn btn-primary btn-lg">START RUNNING →</button>
               <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 1.25rem;">
@@ -1322,13 +1322,13 @@
         ctx.stroke();
       }
 
-      // 4. Draw Obstacles (Obsidian Cyber Spires)
+      // 4. Draw Obstacles (Charcoal Ridge Spires)
       for (const obs of this.obstacles) {
         ctx.save();
-        ctx.fillStyle = '#0a0614';
-        ctx.strokeStyle = '#c084fc';
+        ctx.fillStyle = '#141d18';
+        ctx.strokeStyle = '#b88f4c';
         ctx.lineWidth = 1.5;
-        ctx.shadowColor = 'rgba(168, 85, 247, 0.5)';
+        ctx.shadowColor = 'rgba(184, 143, 76, 0.45)';
         ctx.shadowBlur = 10;
 
         ctx.beginPath();
@@ -1341,12 +1341,12 @@
         ctx.restore();
       }
 
-      // 5. Draw Energy Crystals (Floating Violet Diamonds)
+      // 5. Draw Energy Crystals (Floating Bronze Diamonds)
       for (const orb of this.energies) {
         ctx.save();
         const floatY = orb.y + Math.sin(this.frame * 0.1) * 4;
-        ctx.fillStyle = '#38bdf8';
-        ctx.shadowColor = '#38bdf8';
+        ctx.fillStyle = '#d6af68';
+        ctx.shadowColor = '#d6af68';
         ctx.shadowBlur = 15;
 
         ctx.beginPath();
@@ -1413,8 +1413,8 @@
       ctx.closePath();
       ctx.fill();
 
-      // Glowing Violet Wolf Eye
-      ctx.fillStyle = '#a855f7';
+      // Glowing Bronze Wolf Eye
+      ctx.fillStyle = '#d6af68';
       ctx.beginPath();
       ctx.arc(x + 43, y + 8, 2, 0, Math.PI * 2);
       ctx.fill();
@@ -1515,11 +1515,11 @@
       if (!box || !angleSlider) return;
 
       const palettes = [
-        ['#07050e', '#3b0764', '#9333ea'],
-        ['#020617', '#0e7490', '#38bdf8'],
-        ['#09090b', '#701a75', '#f43f5e'],
-        ['#050814', '#1e1b4b', '#818cf8'],
-        ['#030712', '#4c1d95', '#c084fc']
+        ['#0e1411', '#1f3327', '#b88f4c'],
+        ['#141d18', '#3e5a49', '#d6af68'],
+        ['#0e1411', '#16221b', '#f4efe6'],
+        ['#121814', '#2d4436', '#c99e57'],
+        ['#151f19', '#375240', '#e2c589']
       ];
       let currentPalette = palettes[0];
 

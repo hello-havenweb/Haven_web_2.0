@@ -50,9 +50,9 @@
 }
 .demo-status-chip {
   padding: 0.15rem 0.5rem;
-  background: rgba(147, 51, 234, 0.2);
-  border: 1px solid rgba(147, 51, 234, 0.4);
-  color: #d8b4fe;
+  background: rgba(35, 58, 45, 0.4);
+  border: 1px solid rgba(184, 143, 76, 0.35);
+  color: #d6af68;
   font-size: 0.7rem;
   border-radius: 4px;
 }
@@ -75,7 +75,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 0.85rem;
-  background: #9333ea;
+  background: #b88f4c;
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
@@ -84,7 +84,7 @@
   transition: background 0.2s;
 }
 .demo-topbar-cta:hover {
-  background: #a855f7;
+  background: #d6af68;
 }
 
 /* ==========================================================================

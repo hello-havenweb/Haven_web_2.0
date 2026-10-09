@@ -27,7 +27,7 @@ function initAtmosphericBackground() {
     backdrop.className = 'haven-ambient-backdrop';
     backdrop.setAttribute('aria-hidden', 'true');
 
-    // 18 lightweight atmospheric particles of subtle purple light
+    // 18 lightweight atmospheric particles of subtle warm ivory and bronze light
     let particlesHtml = '';
     const particleCount = 18;
     for (let i = 0; i < particleCount; i++) {

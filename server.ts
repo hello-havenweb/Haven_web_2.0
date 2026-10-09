@@ -16,6 +16,15 @@ const isProduction = process.env.NODE_ENV === 'production';
 // Basic security & parsing middleware
 app.use(express.json({ limit: '1mb' }));
 
+// Security headers
+app.use((_req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(self), geolocation=()');
+  next();
+});
+
 // CORS configuration (enforces configured origin or permissive in local dev)
 app.use((req, res, next) => {
   const allowedOrigin = process.env.ALLOWED_ORIGIN || '*';
@@ -496,6 +505,8 @@ app.all('/api/*', (_req: Request, res: Response) => {
 // 4. Mount Vite in Dev Mode or Static Files in Production
 // ============================================================================
 async function startServer() {
+  const fourOhFourPath = path.resolve(__dirname, '404.html');
+
   if (!isProduction) {
     const vite = await createViteServer({
       server: {
@@ -504,6 +515,39 @@ async function startServer() {
       },
       appType: 'spa',
     });
+
+    // Development check: return 404 for non-existent HTML pages/routes
+    app.use(async (req, res, next) => {
+      if ((req.method === 'GET' || req.method === 'HEAD') && !req.path.startsWith('/@') && !req.path.startsWith('/node_modules') && !req.path.startsWith('/src') && !req.path.startsWith('/api')) {
+        let cleanPath = req.path.replace(/^\//, '');
+        if (!cleanPath) cleanPath = 'index.html';
+        
+        // If no file extension, test whether .html exists
+        if (!path.extname(cleanPath)) {
+          const withHtml = path.resolve(__dirname, cleanPath + '.html');
+          if (fs.existsSync(withHtml)) {
+            return next();
+          }
+        }
+
+        const exactPath = path.resolve(__dirname, cleanPath);
+        const publicPath = path.resolve(__dirname, 'public', cleanPath);
+        if (!fs.existsSync(exactPath) && !fs.existsSync(publicPath)) {
+          if (fs.existsSync(fourOhFourPath)) {
+            try {
+              let html = fs.readFileSync(fourOhFourPath, 'utf-8');
+              html = await vite.transformIndexHtml(req.url, html);
+              return res.status(404).set({ 'Content-Type': 'text/html' }).send(html);
+            } catch {
+              return res.status(404).sendFile(fourOhFourPath);
+            }
+          }
+          return res.status(404).send('Page not found');
+        }
+      }
+      next();
+    });
+
     app.use(vite.middlewares);
   } else {
     // Production static serving
@@ -511,10 +555,21 @@ async function startServer() {
     if (fs.existsSync(distPath)) {
       app.use(express.static(distPath));
       app.get('*', (req, res) => {
-        res.sendFile(path.resolve(distPath, 'index.html'));
+        const potentialFile = path.resolve(distPath, req.path.replace(/^\//, ''));
+        if (fs.existsSync(potentialFile) && fs.statSync(potentialFile).isFile()) {
+          return res.sendFile(potentialFile);
+        }
+        const fourOhFourDist = path.resolve(distPath, '404.html');
+        if (fs.existsSync(fourOhFourDist)) {
+          return res.status(404).sendFile(fourOhFourDist);
+        }
+        res.status(404).sendFile(fourOhFourPath);
       });
     } else {
       app.use(express.static(__dirname));
+      app.use((_req, res) => {
+        res.status(404).sendFile(fourOhFourPath);
+      });
     }
   }
 

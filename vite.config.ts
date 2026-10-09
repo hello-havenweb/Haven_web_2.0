@@ -35,6 +35,8 @@ export default defineConfig(() => {
           vintageReservations: resolve(__dirname, 'templates/vintage-reservations.html'),
           vintageContact: resolve(__dirname, 'templates/vintage-contact.html'),
 
+          emberOak: resolve(__dirname, 'templates/ember-oak.html'),
+
           lumi: resolve(__dirname, 'templates/lumi.html'),
           lumiWork: resolve(__dirname, 'templates/lumi-work.html'),
           lumiServices: resolve(__dirname, 'templates/lumi-services.html'),
